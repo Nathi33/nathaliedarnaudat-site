@@ -1,7 +1,6 @@
-import HeroSection from '../components/HeroSection';
-import ServiceCard from '../components/ServiceCard';
+import ServiceCard from '../../components/ServiceCard';
 
-export default function Home() {
+export default function Services() {
   const services = [
     { title: 'Gestion administrative', description: 'Classement, suivi des dossiers, devis, factures et relances.' },
     { title: 'Accompagnement création d’entreprise', description: 'Formalités, URSSAF, INPI et conseils personnalisés.' },
@@ -10,15 +9,12 @@ export default function Home() {
   ];
 
   return (
-    <div>
-      <HeroSection />
-      <div className="container py-5">
-        <h2 className="mb-4 text-center">Mes Services</h2>
-        <div className="row">
-          {services.map((service, idx) => (
-            <ServiceCard key={idx} title={service.title} description={service.description} />
-          ))}
-        </div>
+    <div className="container py-5">
+      <h1 className="mb-4 text-center">Services</h1>
+      <div className="row">
+        {services.map((service, idx) => (
+          <ServiceCard key={idx} title={service.title} description={service.description} />
+        ))}
       </div>
     </div>
   );
