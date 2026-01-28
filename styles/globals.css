@@ -1,42 +1,116 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/****** Global Styles ******/
+section {
+  position: relative;
+  padding: 0; 
+  animation: fadeIn 0.8s ease-in-out;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.section .container {
+  padding-top: 2rem;   
+  padding-bottom: 2rem; 
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+h1, h2, h3 {
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.section-after-wave .container {
+  padding-top: 2rem; 
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
+.section-with-wave-bottom .container {
+  padding-bottom: 2rem; 
+}
+
+/****** Boutons ******/
+.btn-turquoise {
+  background-color: #00CED1;
+  color: #fff; 
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-turquoise:hover {
+  background-color: #fff;
+  color: #00CED1;
+  border: 2px solid #00CED1;
+  transform: translateY(-2px);
+}
+
+/****** Section Hero ******/
+.hero-section {
+  padding-top: 2rem;
+  padding-bottom: 2rem; 
+  margin-top: 0;
+}
+
+.hero-section h1 {
+  color: #6A1857;
+}
+
+.hero-section h2 {
+  font-weight: 500;
+}
+
+/****** Wave Divider Styles ******/
+.wave-top, .wave-bottom {
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  line-height: 0;
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.wave-top svg, .wave-bottom svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.wave-inverse {
+  transform: rotate(180deg);
+}
+
+/****** Service Card Styles ******/
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.service-card i {
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover i {
+  transform: scale(1.1);
+}
+
+/****** Atouts Card Styles ******/
+.atout-card {
+  border-radius: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.atout-card:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-6px);
+}
+
+/****** Animations ******/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
