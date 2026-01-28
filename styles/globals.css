@@ -118,6 +118,26 @@ h1, h2, h3 {
   transform: translateY(-6px);
 }
 
+/****** Services Styles ******/
+#gestion, #creation, #particuliers, #communication {
+  scroll-margin-top: 100px;
+}
+
+.section-mes-services {
+  position: relative;
+  padding-top: 7rem; 
+  padding-bottom: 3rem;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.section ul {
+  padding-left: 1.2rem;
+}
+
+.section ul li {
+  margin-bottom: 0.5rem;
+}
+
 /****** Footer Styles ******/
 footer li {
   transition: all 0.3s ease;
