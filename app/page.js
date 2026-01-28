@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import ServiceCard from '../components/ServiceCard';
 
 export default function Home() {
   const services = [
@@ -90,6 +89,14 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="wave-top wave-inverse">
+          <svg viewBox="0 0 1440 40" preserveAspectRatio="none">
+            <path
+              fill="url(#grad)"
+              d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z"
+            />
+          </svg>
+        </div>
       </section>
 
       {/* Services */}
@@ -110,6 +117,14 @@ export default function Home() {
             ))}
           </div>
         </div>
+        <div className="wave-bottom">
+          <svg viewBox="0 0 1440 40" preserveAspectRatio="none">
+            <path
+              fill="url(#grad)"
+              d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z"
+            />
+          </svg>
+        </div>
       </section>
 
       {/* Valeurs / Atouts */}
@@ -129,6 +144,14 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+        <div className="wave-top wave-inverse">
+          <svg viewBox="0 0 1440 40" preserveAspectRatio="none">
+            <path
+              fill="url(#grad)"
+              d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z"
+            />
+          </svg>
         </div>
       </section>
 
