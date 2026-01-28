@@ -11,14 +11,14 @@ export default function Services() {
       <div className="container">
 
         {/* Intro */}
-        <h1 className="text-center mb-4">Mes services</h1>
-        <p className="text-center mb-1">
+        <h1 className="text-center mb-4" data-aos="fade-up">Mes services</h1>
+        <p className="text-center mb-1" data-aos="fade-up" data-aos-delay="100">
           J’accompagne les professionnels et les particuliers dans la gestion de leurs démarches
           administratives, avec des prestations adaptées à chaque situation.
         </p>
 
         {/* Zone géographique */}
-        <div className="bg-light p-4 rounded mb-3">
+        <div className="bg-light p-4 rounded mb-3" data-aos="fade-up" data-aos-delay="200">
           <p className="mb-0">
             Basée à <strong>Saint-Christoly-de-Blaye (33)</strong>, j’interviens en
             <strong> Gironde</strong> et en <strong>Charente Maritime</strong>, en présentiel ou à distance.
@@ -26,7 +26,7 @@ export default function Services() {
         </div>
 
         {/* Navigation interne */}
-        <div className="d-flex flex-wrap justify-content-center gap-3 mb-5 navigation-interne">
+        <div className="d-flex flex-wrap justify-content-center gap-3 mb-5 navigation-interne" data-aos="fade-up" data-aos-delay="300">
           <a href="#gestion" className="btn btn-turquoise">Gestion administrative</a>
           <a href="#creation" className="btn btn-turquoise">Création d’entreprise</a>
           <a href="#particuliers" className="btn btn-turquoise">Particuliers</a>
@@ -34,7 +34,7 @@ export default function Services() {
         </div>
 
         {/* Service 1 */}
-        <div id="gestion" className="mb-5">
+        <div id="gestion" className="mb-5" data-aos="fade-up" data-aos-delay="100">
           <h2>Gestion administrative</h2>
           <p>
             Je prends en charge tout ou partie de votre administratif afin de vous permettre
@@ -50,7 +50,7 @@ export default function Services() {
         </div>
 
         {/* Service 2 */}
-        <div id="creation" className="mb-5">
+        <div id="creation" className="mb-5" data-aos="fade-up" data-aos-delay="200">
           <h2>Accompagnement à la création d’entreprise</h2>
           <p>
             Un accompagnement personnalisé pour vous aider à démarrer votre activité
@@ -65,7 +65,7 @@ export default function Services() {
         </div>
 
         {/* Service 3 */}
-        <div id="particuliers" className="mb-5">
+        <div id="particuliers" className="mb-5" data-aos="fade-up" data-aos-delay="300">
           <h2>Assistance administrative pour particuliers</h2>
           <p>
             Je vous accompagne dans vos démarches administratives souvent complexes ou chronophages,
@@ -81,7 +81,7 @@ export default function Services() {
         </div>
 
         {/* Service 4 */}
-        <div id="communication" className="mb-5">
+        <div id="communication" className="mb-5" data-aos="fade-up" data-aos-delay="400">
           <h2>Communication digitale et visuelle</h2>
           <p>
             Des supports simples et efficaces pour améliorer votre visibilité
@@ -94,6 +94,7 @@ export default function Services() {
             <li>Conseils en présentation visuelle et identité graphique</li>
           </ul>
         </div>
+
       </div>
 
       {/* Vague sur toute la largeur */}
@@ -109,14 +110,13 @@ export default function Services() {
         </svg>
       </div>
 
-        {/* CTA */}
-        <div className="text-center mb-3">
-          <h3 className="mb-3">Besoin d’un accompagnement administratif ?</h3>
-          <Link href="/contact" className="btn btn-turquoise btn-lg">
-            Contactez-moi
-          </Link>
-        </div>
-
+      {/* CTA */}
+      <div className="text-center mb-5" data-aos="fade-up" data-aos-delay="500">
+        <h3 className="mb-3">Besoin d’un accompagnement administratif ?</h3>
+        <Link href="/contact" className="btn btn-turquoise btn-lg">
+          Contactez-moi
+        </Link>
+      </div>
     </section>
   );
 }
