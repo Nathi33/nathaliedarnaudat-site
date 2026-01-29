@@ -138,6 +138,19 @@ h1, h2, h3 {
   margin-bottom: 0.5rem;
 }
 
+/****** Contact Styles ******/
+.contact-link {
+  color: #6A1857;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #6A1857;
+  font-weight: bold;
+  transform: translateX(6px);
+}
+
 /****** Légales Styles ******/
 .legal-link {
   color: #00CED1;

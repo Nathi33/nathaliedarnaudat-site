@@ -1,19 +1,161 @@
+'use client';
+
+import { useState, useRef, useEffect } from 'react';
+import emailjs from 'emailjs-com';
+
 export default function ContactForm() {
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const successRef = useRef(null);
+  const errorRef = useRef(null);
+
+  // Scroll vers une ref avec offset pour navbar fixe
+  const scrollToRef = (ref) => {
+    if (!ref.current) return;
+    const topOffset = 100;
+    window.scrollTo({
+      top: ref.current.offsetTop - topOffset,
+      behavior: 'smooth',
+    });
+  };
+
+  // Efface automatiquement les messages après 5 secondes
+  useEffect(() => {
+    if (success || error) {
+      const timer = setTimeout(() => {
+        setSuccess(false);
+        setError(false);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [success, error]);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setError(false);
+
+    // Honeypot anti-spam
+    if (e.target.website.value) return;
+
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        e.target,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        setSuccess(true);
+        e.target.reset();
+        scrollToRef(successRef);
+      })
+      .catch(() => {
+        setError(true);
+        scrollToRef(errorRef);
+      })
+      .finally(() => setLoading(false));
+  };
+
   return (
-    <form action="mailto:contact@nathaliedarnaudat.fr" method="POST" encType="text/plain">
-      <div className="mb-3">
-        <label className="form-label">Nom</label>
-        <input type="text" className="form-control" name="Nom" required />
-      </div>
-      <div className="mb-3">
-        <label className="form-label">Email</label>
-        <input type="email" className="form-control" name="Email" required />
-      </div>
-      <div className="mb-3">
-        <label className="form-label">Message</label>
-        <textarea className="form-control" rows="4" name="Message" required></textarea>
-      </div>
-      <button type="submit" className="btn btn-info text-dark">Envoyer</button>
-    </form>
+    <>
+      {success && (
+        <div ref={successRef} className="alert alert-success text-center">
+          Merci pour votre message. Je reviens vers vous sous 24 à 48 heures ouvrées.
+        </div>
+      )}
+
+      {error && (
+        <div ref={errorRef} className="alert alert-danger text-center">
+          Une erreur est survenue lors de l’envoi du message. Merci de réessayer.
+        </div>
+      )}
+
+      <form
+        onSubmit={sendEmail}
+        onChange={() => {
+          if (success) setSuccess(false);
+          if (error) setError(false);
+        }}
+      >
+        {/* Honeypot */}
+        <input type="text" name="website" className="d-none" />
+
+        <div className="row">
+          <div className="col-md-6 mb-3">
+            <label className="form-label">
+              Nom / Entreprise <span className="text-danger">*</span>
+            </label>
+            <input type="text" name="nom" className="form-control" required />
+          </div>
+
+          <div className="col-md-6 mb-3">
+            <label className="form-label">Prénom</label>
+            <input type="text" name="prenom" className="form-control" />
+          </div>
+        </div>
+
+        <div className="mb-3">
+          <label className="form-label">
+            Téléphone <span className="text-danger">*</span>
+          </label>
+          <input type="tel" name="telephone" className="form-control" required />
+        </div>
+
+        <div className="mb-3">
+          <label className="form-label">
+            Adresse e-mail <span className="text-danger">*</span>
+          </label>
+          <input type="email" name="email" className="form-control" required />
+        </div>
+
+        <div className="mb-3">
+          <label className="form-label">
+            Type de demande <span className="text-danger">*</span>
+          </label>
+          <select name="demande" className="form-select" required>
+            <option value="">Choisir...</option>
+            <option>Gestion administrative</option>
+            <option>Création d’entreprise</option>
+            <option>Assistance particuliers</option>
+            <option>Communication / site web</option>
+            <option>Autre demande</option>
+          </select>
+        </div>
+
+        <div className="mb-4">
+          <label className="form-label">
+            Message <span className="text-danger">*</span>
+          </label>
+          <textarea name="message" rows="5" className="form-control" required />
+        </div>
+
+        {/* RGPD */}
+        <div className="form-check mb-4">
+          <input className="form-check-input" type="checkbox" id="rgpd" required />
+          <label className="form-check-label" htmlFor="rgpd">
+            J’accepte que mes données soient utilisées pour être recontacté(e).
+            <span className="text-danger"> *</span>
+          </label>
+        </div>
+
+        <button type="submit" className="btn btn-turquoise" disabled={loading}>
+          {loading ? (
+            <>
+              <span className="spinner-border spinner-border-sm me-2"></span>
+              Envoi en cours...
+            </>
+          ) : (
+            'Envoyer le message'
+          )}
+        </button>
+
+        <div className="text-muted mt-4">
+          <span className="text-danger">*</span> Champs obligatoires
+        </div>
+      </form>
+    </>
   );
 }
