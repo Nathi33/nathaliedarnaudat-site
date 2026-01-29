@@ -1,8 +1,19 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Services – Nathalie Darnaudat',
-  description: 'Services d’assistance administrative pour professionnels et particuliers en Gironde et Charente.',
+  title: 'Mes Services – Nathalie Darnaudat',
+  description: 'Découvrez les services proposés par Nathalie Darnaudat : gestion administrative, accompagnement création d’entreprise, communication digitale et assistance pour particuliers.',
+  openGraph: {
+    title: 'Mes Services – Nathalie Darnaudat',
+    description: 'Découvrez les services proposés par Nathalie Darnaudat : gestion administrative, accompagnement création d’entreprise, communication digitale et assistance pour particuliers.',
+    url: 'https://www.nathaliedarnaudat.fr/services',
+    siteName: 'Nathalie Darnaudat',
+    images: [
+      { url: '/images/og-services.webp', width: 1200, height: 630, alt: 'Services Nathalie Darnaudat' },
+    ],
+    locale: 'fr_FR',
+    type: 'website',
+  },
 };
 
 export default function Services() {

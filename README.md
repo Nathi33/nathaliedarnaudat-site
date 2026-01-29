@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Site vitrine – Nathalie Darnaudat  
+Assistante administrative indépendante
 
-## Getting Started
+## 🧾 Présentation du projet
 
-First, run the development server:
+Ce projet est le **site vitrine officiel** de l’activité de Nathalie Darnaudat, assistante administrative indépendante en Gironde et Charente.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Il a été conçu pour :
+- présenter clairement les services proposés,
+- rassurer les visiteurs,
+- faciliter la prise de contact,
+- assurer une visibilité optimale sur les moteurs de recherche.
+
+Le site est destiné à une **mise en production réelle** et à une utilisation professionnelle.
+
+---
+
+## 🎯 Objectifs du site
+
+- Présenter les services et domaines d’intervention
+- Valoriser l’expérience et le professionnalisme
+- Simplifier la prise de contact
+- Offrir une navigation fluide et intuitive
+- Assurer un bon référencement naturel
+
+---
+
+## 🛠️ Technologies utilisées
+
+- **Framework** : Next.js (App Router)
+- **Langage** : JavaScript / React
+- **UI** : Bootstrap 5
+- **Animations** : AOS (Animate On Scroll)
+- **Styles** : CSS global personnalisé
+- **Icônes** : Bootstrap Icons
+- **SEO** :
+  - Metadata native Next.js
+  - Open Graph
+  - Données structurées (JSON-LD – Organization)
+- **Images** :
+  - Next/Image
+  - Format WebP
+  - Optimisation des performances
+
+---
+
+## 🗂️ Structure du projet
+
+Le projet est structuré selon les bonnes pratiques de **Next.js (App Router)** afin de garantir lisibilité, maintenabilité et évolutivité.
+
+```txt
+├── app/
+│   ├── layout.js            # Layout principal (HTML, Navbar, Footer)
+│   ├── page.js              # Page Accueil
+│   ├── services/
+│   │   └── page.js          # Page Services
+│   ├── about/
+│   │   └── page.js          # Page À propos
+│   ├── contact/
+│   │   └── page.js          # Page Contact
+│   ├── AOSProvider.js       # Initialisation des animations AOS
+│
+├── components/
+│   ├── Navbar.js            # Barre de navigation
+│   ├── Footer.js            # Pied de page
+│   ├── ContactForm.js       # Formulaire de contact
+│   └── BootstrapJSLoader.js # Chargement du JS Bootstrap côté client
+│
+├── public/
+│   └── images/
+│       ├── Logo.webp        # Logo principal
+│       └── og-image.webp    # Image Open Graph
+│
+├── styles/
+│   └── globals.css          # Styles globaux personnalisés
+│
+├── .env.local               # Variables d’environnement (EmailJS, etc.)
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ✨ Fonctionnalités principales
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Site multi-pages (Accueil, Services, À propos, Contact)
+- Navigation responsive (desktop, tablette, mobile)
+- Menu mobile avec burger
+- Animations discrètes au scroll
+- Contenu structuré et lisible
+- Liens internes clairs
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🔍 SEO & Accessibilité
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Titres et descriptions personnalisés par page
+- URLs lisibles et cohérentes
+- Images optimisées avec attributs `alt`
+- Icônes décoratives masquées pour les lecteurs d’écran (`aria-hidden="true"`)
+- Hiérarchie de titres respectée
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ⚡ Performance & bonnes pratiques
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Optimisation automatique du code par Next.js
+- Chargement prioritaire de l’image principale
+- Import du JavaScript Bootstrap côté client uniquement
+- Code structuré et maintenable
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🚀 Installation et lancement en local
+
+Pour tester ou développer le site sur votre machine locale :
+
+```bash
+# Cloner le dépôt Git (si applicable)
+git clone https://github.com/Nathi33/nathaliedarnaudat-site.git
+cd nathaliedarnaudat-site
+
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
+npm run dev
+
+# Le site sera accessible à l'adresse :
+http://localhost:3000
+
+# Pour créer une version de production optimisée
+npm run build
+npm start
+```
+---
+
+## 📌 Statut du projet
+
+- Site finalisé et en ligne : [https://www.nathaliedarnaudat.fr](https://www.nathaliedarnaudat.fr)  
+- Contenu et fonctionnalités adaptés à l’activité d’assistante administrative indépendante  
+- Optimisé SEO et accessible
+- Évolutif selon les besoins futurs de l’activité
+
+---
+
+## 👩‍💻 Activité
+
+Site officiel de
+**Nathalie Darnaudat – Assistante administrative indépendante**
+
+🌐 https://www.nathaliedarnaudat.fr
+🔗 LinkedIn : https://www.linkedin.com/company/nathalie-darnaudat-assistante-administrative
