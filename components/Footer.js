@@ -31,7 +31,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/politique-de-confidentialite" className="text-white text-decoration-none">
+                <Link href="/politique-confidentialite" className="text-white text-decoration-none">
                   Politique de confidentialité
                 </Link>
               </li>
