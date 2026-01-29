@@ -1,4 +1,4 @@
-/****** Global Styles ******/
+/****** Style Général ******/
 section {
   position: relative;
   padding: 0; 
@@ -39,7 +39,7 @@ h1, h2, h3 {
   transform: translateY(-2px);
 }
 
-/****** Navbar Styles ******/
+/****** Navbar ******/
 .nav-link {
   color: #fff !important;
   transition: color 0.3s, font-weight 0.3s;
@@ -53,7 +53,7 @@ h1, h2, h3 {
   font-weight: 700;
 }
 
-/****** Accueil Styles ******/
+/****** Accueil ******/
 /* Section Hero */
 .hero-section {
   padding-top: 7rem;
@@ -69,7 +69,7 @@ h1, h2, h3 {
   font-weight: 500;
 }
 
-/* Wave Divider Styles */
+/* Wave Divider */
 .wave-top, .wave-bottom {
   width: 100%;
   height: 40px;
@@ -88,7 +88,7 @@ h1, h2, h3 {
   transform: rotate(180deg);
 }
 
-/* Service Card Styles */
+/* Section Service */
 .service-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 16px;
@@ -107,7 +107,7 @@ h1, h2, h3 {
   transform: scale(1.1);
 }
 
-/* Atouts Card Styles */
+/* Section Atouts */
 .atout-card {
   border-radius: 16px;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -118,7 +118,7 @@ h1, h2, h3 {
   transform: translateY(-6px);
 }
 
-/****** Services Styles ******/
+/****** Services ******/
 #gestion, #creation, #particuliers, #communication {
   scroll-margin-top: 100px;
 }
@@ -138,7 +138,7 @@ h1, h2, h3 {
   margin-bottom: 0.5rem;
 }
 
-/****** Contact Styles ******/
+/****** Contact ******/
 .contact-link {
   color: #6A1857;
   text-decoration: none;
@@ -151,7 +151,7 @@ h1, h2, h3 {
   transform: translateX(6px);
 }
 
-/****** Légales Styles ******/
+/****** Légales ******/
 .legal-link {
   color: #00CED1;
   text-decoration: none;
@@ -164,7 +164,7 @@ h1, h2, h3 {
   transform: translateX(6px);
 }
 
-/****** Footer Styles ******/
+/****** Footer ******/
 footer li {
   transition: all 0.3s ease;
 }

@@ -32,7 +32,7 @@ export default function About() {
               className="img-fluid rounded shadow"
             />
           </div>
-          <div className="col-md-6" data-aos="fade-left">
+          <div className="col-md-6 mt-4 mt-md-0" data-aos="fade-left">
             <h2 className="mb-3">Mon parcours</h2>
             <p>
               Après plus de 10 ans dans le secteur médico-social, j’ai développé une solide expérience en gestion administrative, organisation et suivi de dossiers. 

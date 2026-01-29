@@ -1,4 +1,10 @@
 import Image from 'next/image';
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'Accueil – Nathalie Darnaudat',
+  description: "Nathalie Darnaudat, assistante administrative indépendante en Gironde et Charente. Simplifiez, organisez et déléguez votre administratif.",
+};
 
 export default function Home() {
   const services = [
@@ -106,13 +112,15 @@ export default function Home() {
           <div className="row">
             {services.map((service, idx) => (
               <div key={idx} className="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay={idx * 100}>
-                <div className="card h-100 text-center atout-card border-0 shadow-sm">
-                  <div className="card-body">
-                    <i className={`bi ${service.icon} display-5 text-info mb-3`}></i>
-                    <h5>{service.title}</h5>
-                    <p className="text-muted">{service.description}</p>
+                <Link href="/services" className="text-decoration-none">
+                  <div className="card h-100 text-center atout-card border-0 shadow-sm">
+                    <div className="card-body">
+                      <i className={`bi ${service.icon} display-5 text-info mb-3`}></i>
+                      <h5>{service.title}</h5>
+                      <p className="text-muted">{service.description}</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
@@ -134,13 +142,15 @@ export default function Home() {
           <div className="row">
             {atouts.map((atout, idx) => (
               <div key={idx} className="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay={idx * 100}>
-                <div className="card h-100 text-center atout-card border-0 shadow-sm">
-                  <div className="card-body">
-                    <i className={`bi ${atout.icon} display-5 text-info mb-3`}></i>
-                    <h5>{atout.title}</h5>
-                    <p className="text-muted">{atout.text}</p>
+                <Link href="/about" className="text-decoration-none">
+                  <div className="card h-100 text-center atout-card border-0 shadow-sm">
+                    <div className="card-body">
+                      <i className={`bi ${atout.icon} display-5 text-info mb-3`}></i>
+                      <h5>{atout.title}</h5>
+                      <p className="text-muted">{atout.text}</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
