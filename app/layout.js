@@ -1,14 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../styles/globals.css';
+
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import AOSProvider from './AOSProvider'; 
-
-export const metadata = {
-  title: 'Nathalie Darnaudat',
-  description: 'Assistante administrative indépendante',
-};
+import AOSProvider from './AOSProvider';
+import BootstrapJSLoader from '../components/BootstrapJSLoader';
 
 export default function RootLayout({ children }) {
   return (
@@ -19,6 +16,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </AOSProvider>
+        <BootstrapJSLoader />
       </body>
     </html>
   );
