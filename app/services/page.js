@@ -11,14 +11,16 @@ export default function Services() {
       <div className="container">
 
         {/* Intro */}
-        <h1 className="text-center mb-4" data-aos="fade-up">Mes services</h1>
-        <p className="text-center mb-1" data-aos="fade-up" data-aos-delay="100">
-          J’accompagne les professionnels et les particuliers dans la gestion de leurs démarches
-          administratives, avec des prestations adaptées à chaque situation.
-        </p>
+        <div className="text-center mb-2" data-aos="fade-up">
+          <h1 className="display-5 fw-bold mb-5">Mes services</h1>
+          <p className="mb-1" data-aos-delay="100">
+            J’accompagne les professionnels et les particuliers dans la gestion de leurs démarches
+            administratives, avec des prestations adaptées à chaque situation.
+          </p>
+        </div>
 
         {/* Zone géographique */}
-        <div className="bg-light p-4 rounded mb-3" data-aos="fade-up" data-aos-delay="200">
+        <div className="bg-light p-4 rounded mb-4" data-aos="fade-up" data-aos-delay="200">
           <p className="mb-0">
             Basée à <strong>Saint-Christoly-de-Blaye (33)</strong>, j’interviens en
             <strong> Gironde</strong> et en <strong>Charente Maritime</strong>, en présentiel ou à distance.

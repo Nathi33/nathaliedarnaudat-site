@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Colonne 1 – Identité */}
           <div className="col-md-4 mb-4">
             <h5 className="fw-bold">Nathalie Darnaudat</h5>
-            <p className="mb-1">Assistante administrative indépendante</p>
+            <p className="mb-3">Assistante administrative indépendante</p>
             <p className="small mb-0">
               Basée à <strong>Saint-Christoly-de-Blaye (33)</strong><br />
               Interventions en <strong>Gironde</strong> et <strong>Charente Maritime</strong><br />
