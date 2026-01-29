@@ -3,7 +3,24 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Accueil – Nathalie Darnaudat',
-  description: "Nathalie Darnaudat, assistante administrative indépendante en Gironde et Charente. Simplifiez, organisez et déléguez votre administratif.",
+  description: 'Assistante administrative indépendante en Gironde et Charente. Simplifiez, organisez et déléguez votre administratif.',
+  openGraph: {
+    title: 'Accueil – Nathalie Darnaudat',
+    description: 'Assistante administrative indépendante en Gironde et Charente. Simplifiez, organisez et déléguez votre administratif.',
+    url: 'https://www.nathaliedarnaudat.fr',
+    siteName: 'Nathalie Darnaudat',
+    images: [
+      {
+        url: '/images/og-image.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Nathalie Darnaudat – Assistante administrative',
+      },
+    ],
+    locale: 'fr_FR',
+    type: 'website',
+  },
+  robots: 'index, follow',
 };
 
 export default function Home() {
@@ -30,7 +47,7 @@ export default function Home() {
             {/* Logo qui arrive de la gauche */}
             <div className="col-md-5 text-center mb-4 mb-md-0" data-aos="fade-right">
               <Image
-                src="/images/logo1.png"
+                src="/images/Logo.webp"
                 alt="Logo Nathalie Darnaudat"
                 width={450}
                 height={450}
@@ -86,10 +103,10 @@ export default function Home() {
             <div className="col-md-6" data-aos="fade-left" data-aos-delay="100">
               <div className="p-4 rounded shadow-sm bg-light">
                 <ul className="list-unstyled mb-0">
-                  <li className="mb-3"><i className="bi bi-check-lg text-info me-2"></i>Gestion administrative complète ou partielle</li>
-                  <li className="mb-3"><i className="bi bi-check-lg text-info me-2"></i>Accompagnement à la création d’entreprise</li>
-                  <li className="mb-3"><i className="bi bi-check-lg text-info me-2"></i>Soutien administratif pour particuliers</li>
-                  <li><i className="bi bi-check-lg text-info me-2"></i>Communication digitale simple et efficace</li>
+                  <li className="mb-3"><i className="bi bi-check-lg text-info me-2" aria-hidden="true"></i>Gestion administrative complète ou partielle</li>
+                  <li className="mb-3"><i className="bi bi-check-lg text-info me-2" aria-hidden="true"></i>Accompagnement à la création d’entreprise</li>
+                  <li className="mb-3"><i className="bi bi-check-lg text-info me-2" aria-hidden="true"></i>Soutien administratif pour particuliers</li>
+                  <li><i className="bi bi-check-lg text-info me-2" aria-hidden="true"></i>Communication digitale simple et efficace</li>
                 </ul>
               </div>
             </div>
@@ -115,7 +132,7 @@ export default function Home() {
                 <Link href="/services" className="text-decoration-none">
                   <div className="card h-100 text-center atout-card border-0 shadow-sm">
                     <div className="card-body">
-                      <i className={`bi ${service.icon} display-5 text-info mb-3`}></i>
+                      <i className={`bi ${service.icon} display-5 text-info mb-3`} aria-hidden="true"></i>
                       <h5>{service.title}</h5>
                       <p className="text-muted">{service.description}</p>
                     </div>
@@ -145,7 +162,7 @@ export default function Home() {
                 <Link href="/about" className="text-decoration-none">
                   <div className="card h-100 text-center atout-card border-0 shadow-sm">
                     <div className="card-body">
-                      <i className={`bi ${atout.icon} display-5 text-info mb-3`}></i>
+                      <i className={`bi ${atout.icon} display-5 text-info mb-3`} aria-hidden="true"></i>
                       <h5>{atout.title}</h5>
                       <p className="text-muted">{atout.text}</p>
                     </div>

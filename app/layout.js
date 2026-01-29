@@ -7,15 +7,26 @@ import Footer from '../components/Footer';
 import AOSProvider from './AOSProvider';
 import BootstrapJSLoader from '../components/BootstrapJSLoader';
 
+import { organizationStructuredData } from '../lib/structuredData';
+
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body>
+        {/* JSON-LD global */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationStructuredData),
+          }}
+        />
+
         <AOSProvider>
           <Navbar />
           {children}
           <Footer />
         </AOSProvider>
+
         <BootstrapJSLoader />
       </body>
     </html>

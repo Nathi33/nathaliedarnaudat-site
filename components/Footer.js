@@ -46,7 +46,7 @@ export default function Footer() {
                 href="mailto:nathalie.drnt@outlook.fr" 
                 className="footer-link d-inline-flex align-items-center"
               >
-                <i className="bi bi-envelope me-2"></i>
+                <i className="bi bi-envelope me-2" aria-hidden="true"></i>
                 nathalie.drnt@outlook.fr
               </a>
             </p>
@@ -55,7 +55,7 @@ export default function Footer() {
                 href="tel:+33763499510" 
                 className="footer-link d-inline-flex align-items-center"
               >
-                <i className="bi bi-telephone me-2"></i>
+                <i className="bi bi-telephone me-2" aria-hidden="true"></i>
                 07 63 49 95 10
               </a>
             </p>
@@ -66,7 +66,7 @@ export default function Footer() {
                 target='_blank'
                 rel="noopener noreferrer"
               >
-                <i className="bi bi-geo-alt me-2"></i>
+                <i className="bi bi-geo-alt me-2" aria-hidden="true"></i>
                 Saint-Christoly-de-Blaye (33920)
               </Link>
             </p>
@@ -79,7 +79,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
-              <i className='bi bi-linkedin'></i>
+              <i className='bi bi-linkedin' aria-hidden="true"></i>
               </a>
               <a
                 href="https://www.facebook.com/profile.php?id=61587288295204"
@@ -88,16 +88,16 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label="Facebook"
               >
-                <i className='bi bi-facebook'></i>
+                <i className='bi bi-facebook' aria-hidden="true"></i>
               </a>
               <a
-                href="https://www.instagram.com/nathaliedarnaudat"
+                href="https://www.instagram.com/nathaliedarnaudat.assistante/"
                 className="footer-social"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
               >
-                <i className='bi bi-instagram'></i>
+                <i className='bi bi-instagram' aria-hidden="true"></i>
               </a>
             </div>
           </div>

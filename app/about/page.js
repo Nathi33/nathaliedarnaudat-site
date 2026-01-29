@@ -3,7 +3,18 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'À propos – Nathalie Darnaudat',
-  description: "Découvrez le parcours, les compétences et les valeurs de Nathalie Darnaudat, assistante administrative indépendante en Gironde et Charente.",
+  description: 'Découvrez le parcours, les compétences et les valeurs de Nathalie Darnaudat, assistante administrative indépendante en Gironde et Charente.',
+  openGraph: {
+    title: 'À propos – Nathalie Darnaudat',
+    description: 'Découvrez le parcours, les compétences et les valeurs de Nathalie Darnaudat, assistante administrative indépendante en Gironde et Charente.',
+    url: 'https://www.nathaliedarnaudat.fr/about',
+    siteName: 'Nathalie Darnaudat',
+    images: [
+      { url: '/images/og-About.webp', width: 1200, height: 630, alt: 'À propos de Nathalie Darnaudat' },
+    ],
+    locale: 'fr_FR',
+    type: 'website',
+  },
 };
 
 export default function About() {
@@ -25,8 +36,8 @@ export default function About() {
         <div className="row align-items-center mb-5" data-aos="fade-up">
           <div className="col-md-6" data-aos="fade-right">
             <Image
-              src="/images/about.png"
-              alt="Nathalie Darnaudat"
+              src="/images/About.webp"
+              alt="logo Nathalie Darnaudat avec des dossiers administratifs, un ordinateur portable et intitulé des services"
               width={500}
               height={500}
               className="img-fluid rounded shadow"
@@ -68,28 +79,28 @@ export default function About() {
           <div className="row text-center g-4">
             <div className="col-md-3">
               <div className="p-4 rounded shadow-sm h-100" data-aos="zoom-in" data-aos-delay="50">
-                <i className="bi bi-list-task display-5 text-info mb-3"></i>
+                <i className="bi bi-list-task display-5 text-info mb-3" aria-hidden="true"></i>
                 <h5>Planification</h5>
                 <p className="text-muted">Structurer et planifier les tâches pour assurer un suivi fluide et efficace.</p>
               </div>
             </div>
             <div className="col-md-3">
               <div className="p-4 rounded shadow-sm h-100" data-aos="zoom-in" data-aos-delay="100">
-                <i className="bi bi-clock-history display-5 text-info mb-3"></i>
+                <i className="bi bi-clock-history display-5 text-info mb-3" aria-hidden="true"></i>
                 <h5>Priorisation</h5>
                 <p className="text-muted">Identifier les actions les plus importantes pour gagner du temps et éviter le stress.</p>
               </div>
             </div>
             <div className="col-md-3">
               <div className="p-4 rounded shadow-sm h-100" data-aos="zoom-in" data-aos-delay="150">
-                <i className="bi bi-graph-up display-5 text-info mb-3"></i>
+                <i className="bi bi-graph-up display-5 text-info mb-3" aria-hidden="true"></i>
                 <h5>Suivi et reporting</h5>
                 <p className="text-muted">Analyser l’avancement des dossiers et fournir des comptes rendus précis et clairs.</p>
               </div>
             </div>
             <div className="col-md-3">
               <div className="p-4 rounded shadow-sm h-100" data-aos="zoom-in" data-aos-delay="200">
-                <i className="bi bi-people display-5 text-info mb-3"></i>
+                <i className="bi bi-people display-5 text-info mb-3" aria-hidden="true"></i>
                 <h5>Communication</h5>
                 <p className="text-muted">Assurer un échange fluide et efficace avec clients, partenaires et collaborateurs.</p>
               </div>
@@ -117,17 +128,17 @@ export default function About() {
           <h2 className="text-center mb-5">Mes valeurs professionnelles</h2>
           <div className="row text-center g-4">
             <div className="col-md-4">
-              <i className="bi bi-people display-5 text-info mb-2"></i>
+              <i className="bi bi-people display-5 text-info mb-2" aria-hidden="true"></i>
               <h5>Écoute</h5>
               <p className="text-muted">Comprendre vos besoins et adapter mon accompagnement à votre situation.</p>
             </div>
             <div className="col-md-4">
-              <i className="bi bi-lightbulb display-5 text-info mb-2"></i>
+              <i className="bi bi-lightbulb display-5 text-info mb-2" aria-hidden="true"></i>
               <h5>Simplicité</h5>
               <p className="text-muted">Proposer des solutions claires et efficaces, sans complexité inutile.</p>
             </div>
             <div className="col-md-4">
-              <i className="bi bi-hand-thumbs-up display-5 text-info mb-2"></i>
+              <i className="bi bi-hand-thumbs-up display-5 text-info mb-2" aria-hidden="true"></i>
               <h5>Fiabilité</h5>
               <p className="text-muted">Garantir un accompagnement sérieux et constant, sur lequel vous pouvez compter.</p>
             </div>
