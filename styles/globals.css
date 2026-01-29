@@ -138,6 +138,19 @@ h1, h2, h3 {
   margin-bottom: 0.5rem;
 }
 
+/****** Légales Styles ******/
+.legal-link {
+  color: #00CED1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.legal-link:hover {
+  color: #00CED1;
+  font-weight: bold;
+  transform: translateX(6px);
+}
+
 /****** Footer Styles ******/
 footer li {
   transition: all 0.3s ease;
