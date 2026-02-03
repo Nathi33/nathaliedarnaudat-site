@@ -52,6 +52,7 @@ export default function Home() {
                 width={450}
                 height={450}
                 className="img-fluid"
+                unoptimized
                 priority
               />
             </div>

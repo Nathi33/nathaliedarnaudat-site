@@ -34,7 +34,7 @@ export default function Navbar() {
       <div className="container">
         {/* Logo */}
         <Link href="/" className="navbar-brand">
-          <Image src="/images/logo1.png" alt="Logo Nathalie Darnaudat" width={60} height={60} loading="eager" />
+          <Image src="/images/Logo.webp" alt="Logo Nathalie Darnaudat" width={60} height={60} loading="eager" unoptimized />
         </Link>
 
         <button

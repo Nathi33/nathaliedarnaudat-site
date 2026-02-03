@@ -41,6 +41,7 @@ export default function About() {
               width={500}
               height={500}
               className="img-fluid rounded shadow"
+              unoptimized
             />
           </div>
           <div className="col-md-6 mt-4 mt-md-0" data-aos="fade-left">
