@@ -1,15 +1,15 @@
 import ContactForm from '../../components/ContactForm';
 
 export const metadata = {
-  title: 'Contact – Nathalie Darnaudat',
-  description: 'Contactez Nathalie Darnaudat, assistante administrative indépendante en Gironde et Charente.',
+  title: 'Contactez votre télésecrétaire médicale – Nathalie Darnaudat',
+  description: 'Contactez Nathalie Darnaudat, télésecrétariat médical et paramédical indépendante.',
   openGraph: {
-    title: 'Contact – Nathalie Darnaudat',
-    description: 'Contactez Nathalie Darnaudat, assistante administrative indépendante en Gironde et Charente.',
+    title: 'Contactez votre télésecrétaire médicale – Nathalie Darnaudat',
+    description: 'Contactez Nathalie Darnaudat, télésecrétariat médical et paramédical indépendante.',
     url: 'https://www.nathaliedarnaudat.fr/contact',
     siteName: 'Nathalie Darnaudat',
     images: [
-      { url: '/images/og-Contact.webp', width: 1200, height: 630, alt: 'Contact Nathalie Darnaudat' },
+      { url: '/images/og-Contact.webp', width: 1200, height: 630, alt: 'Contact télésecétariat médical Nathalie Darnaudat' },
     ],
     locale: 'fr_FR',
     type: 'website',
@@ -24,8 +24,7 @@ export default function Contact() {
         <div className="text-center mb-5" data-aos="fade-up">
           <h1 className="display-5 fw-bold mb-3">Contact</h1>
           <p className="lead mb-0">
-            Une question, un besoin ponctuel ou un accompagnement sur le long terme ?  
-            Parlons-en.
+            Vous souhaitez déléguer la gestion de vos appels et messages patients ? Que ce soit pour un besoin ponctuel ou un suivi régulier, je vous accompagne pour libérer votre temps et sécuriser vos échanges.
           </p>
         </div>
 
@@ -58,7 +57,7 @@ export default function Contact() {
               </p>
               <p className="mb-0">
                 <i className="bi bi-laptop me-2 text-info" aria-hidden="true"></i>
-                Intervention à distance ou en présentiel (Gironde & Charente)
+                Intervention à distance ou ponctuellement en cabinet (Gironde & Charente)
               </p>
 
               <hr />

@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'À propos – Nathalie Darnaudat',
-  description: 'Découvrez le parcours, les compétences et les valeurs de Nathalie Darnaudat, assistante administrative indépendante en Gironde et Charente.',
+  description: 'Télésecrétaire indépendante spécialisée médical et paramédical : découvrez mon parcours, mes compétences et ma mission pour libérer votre temps et votre sérénité.',
   openGraph: {
     title: 'À propos – Nathalie Darnaudat',
-    description: 'Découvrez le parcours, les compétences et les valeurs de Nathalie Darnaudat, assistante administrative indépendante en Gironde et Charente.',
+    description: 'Télésecrétaire indépendante spécialisée médical et paramédical : découvrez mon parcours, mes compétences et ma mission pour libérer votre temps et votre sérénité.',
     url: 'https://www.nathaliedarnaudat.fr/about',
     siteName: 'Nathalie Darnaudat',
     images: [
@@ -24,9 +24,9 @@ export default function About() {
       {/* Hero texte */}
       <div className="container">
         <div className="text-center mb-5" data-aos="fade-up">
-          <h1 className="display-5 fw-bold mb-3">Votre administratif simplifié, votre temps préservé</h1>
+          <h1 className="display-5 fw-bold mb-3">Votre télésecrétariat médical simplifié</h1>
           <p className="lead mb-0">
-            J’accompagne professionnels et particuliers pour optimiser, organiser et déléguer leurs tâches administratives.
+            Je libère les professionnels de santé des interruptions téléphoniques et de la gestion administrative pour qu’ils puissent se concentrer sur leurs patients.
           </p>
         </div>
       </div>
@@ -47,14 +47,13 @@ export default function About() {
           <div className="col-md-6 mt-4 mt-md-0" data-aos="fade-left">
             <h2 className="mb-3">Mon parcours</h2>
             <p>
-              Après plus de 10 ans dans le secteur médico-social, j’ai développé une solide expérience en gestion administrative, organisation et suivi de dossiers. 
+              Forte de plus de 10 ans d’expérience dans le secteur médico-social, j’ai acquis une expertise solide en gestion des appels, prise de messages et organisation administrative spécifique aux professionnels de santé.
             </p>
             <p>
-              Animée par l’envie d’apporter plus de flexibilité et d’efficacité à mes clients, j’ai choisi de me consacrer pleinement à l’assistanat administratif indépendant. 
-              Aujourd’hui, je propose un accompagnement sur mesure aux indépendants, TPE et particuliers, pour alléger leur charge administrative tout en sécurisant leurs démarches.
+              Aujourd’hui, je propose un service de télésecrétariat personnalisé pour médecins, infirmiers, kinésithérapeutes, ostéopathes et psychologues.<br/> Mon objectif : alléger votre quotidien, sécuriser vos échanges avec vos patients et optimiser votre organisation.
             </p>
             <p>
-              Cette expérience me permet de combiner méthode, sens pratique et écoute pour fournir des solutions claires, fiables et adaptées à chaque situation.
+              Ma méthodologie combine rigueur, réactivité et bienveillance, pour offrir un service fiable et adapté à chaque cabinet.
             </p>
           </div>
         </div>
@@ -78,32 +77,33 @@ export default function About() {
         <div className="mb-5" data-aos="fade-up">
           <h2 className="text-center mb-4">Mes compétences professionnelles</h2>
           <div className="row text-center g-4">
-            <div className="col-md-3">
+            <div className="col-md-4">
               <div className="p-4 rounded shadow-sm h-100" data-aos="zoom-in" data-aos-delay="50">
-                <i className="bi bi-list-task display-5 text-info mb-3" aria-hidden="true"></i>
-                <h5>Planification</h5>
-                <p className="text-muted">Structurer et planifier les tâches pour assurer un suivi fluide et efficace.</p>
+                <i className="bi bi-person-lines-fill display-5 text-info mb-3" aria-hidden="true"></i>
+                <h5>Gestion complète des appels</h5>
+                <p className="text-muted">
+                  Organisation efficace des prises de contact, filtrage des urgences et suivi précis des messages pour chaque patient.
+                </p>
               </div>
             </div>
-            <div className="col-md-3">
+
+            <div className="col-md-4">
               <div className="p-4 rounded shadow-sm h-100" data-aos="zoom-in" data-aos-delay="100">
-                <i className="bi bi-clock-history display-5 text-info mb-3" aria-hidden="true"></i>
-                <h5>Priorisation</h5>
-                <p className="text-muted">Identifier les actions les plus importantes pour gagner du temps et éviter le stress.</p>
+                <i className="bi bi-file-earmark-text display-5 text-info mb-3" aria-hidden="true"></i>
+                <h5>Suivi administratif personnalisé</h5>
+                <p className="text-muted">
+                  Tenue et mise à jour des dossiers, gestion des rendez-vous et coordination avec vos outils internes.
+                </p>
               </div>
             </div>
-            <div className="col-md-3">
+
+            <div className="col-md-4">
               <div className="p-4 rounded shadow-sm h-100" data-aos="zoom-in" data-aos-delay="150">
-                <i className="bi bi-graph-up display-5 text-info mb-3" aria-hidden="true"></i>
-                <h5>Suivi et reporting</h5>
-                <p className="text-muted">Analyser l’avancement des dossiers et fournir des comptes rendus précis et clairs.</p>
-              </div>
-            </div>
-            <div className="col-md-3">
-              <div className="p-4 rounded shadow-sm h-100" data-aos="zoom-in" data-aos-delay="200">
-                <i className="bi bi-people display-5 text-info mb-3" aria-hidden="true"></i>
-                <h5>Communication</h5>
-                <p className="text-muted">Assurer un échange fluide et efficace avec clients, partenaires et collaborateurs.</p>
+                <i className="bi bi-lightning-charge display-5 text-info mb-3" aria-hidden="true"></i>
+                <h5>Réactivité et adaptabilité</h5>
+                <p className="text-muted">
+                  Intervention rapide face aux imprévus, ajustement selon votre organisation et vos priorités du moment.
+                </p>
               </div>
             </div>
           </div>
@@ -129,19 +129,25 @@ export default function About() {
           <h2 className="text-center mb-5">Mes valeurs professionnelles</h2>
           <div className="row text-center g-4">
             <div className="col-md-4">
-              <i className="bi bi-people display-5 text-info mb-2" aria-hidden="true"></i>
-              <h5>Écoute</h5>
-              <p className="text-muted">Comprendre vos besoins et adapter mon accompagnement à votre situation.</p>
+              <i className="bi bi-shield-lock display-5 text-info mb-2" aria-hidden="true"></i>
+              <h5>Confidentialité</h5>
+              <p className="text-muted">
+                Respect total du secret médical et protection des données de vos patients.
+              </p>
             </div>
             <div className="col-md-4">
-              <i className="bi bi-lightbulb display-5 text-info mb-2" aria-hidden="true"></i>
-              <h5>Simplicité</h5>
-              <p className="text-muted">Proposer des solutions claires et efficaces, sans complexité inutile.</p>
-            </div>
-            <div className="col-md-4">
-              <i className="bi bi-hand-thumbs-up display-5 text-info mb-2" aria-hidden="true"></i>
+              <i className="bi bi-person-check display-5 text-info mb-2" aria-hidden="true"></i>
               <h5>Fiabilité</h5>
-              <p className="text-muted">Garantir un accompagnement sérieux et constant, sur lequel vous pouvez compter.</p>
+              <p className="text-muted">
+                Un service constant, rigoureux et professionnel, sur lequel vous pouvez compter chaque jour.
+              </p>
+            </div>
+            <div className="col-md-4">
+              <i className="bi bi-heart-pulse display-5 text-info mb-2" aria-hidden="true"></i>
+              <h5>Bienveillance</h5>
+              <p className="text-muted">
+                Accueil humain et attentionné, pour que vos patients se sentent en confiance dès le premier appel.
+              </p>
             </div>
           </div>
         </div>

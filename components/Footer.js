@@ -9,11 +9,11 @@ export default function Footer() {
           {/* Colonne 1 – Identité */}
           <div className="col-md-4 mb-4">
             <h5 className="fw-bold">Nathalie Darnaudat</h5>
-            <p className="mb-3">Assistante administrative indépendante</p>
+            <p className="mb-3">Télésecrétaire et assistante administrative indépendante, spécialisée médico-social</p>
             <p className="small mb-0">
-              Basée à <strong>Saint-Christoly-de-Blaye (33)</strong><br />
-              Interventions en <strong>Gironde</strong> et <strong>Charente Maritime</strong><br />
-              Prestations possibles à distance dans le Sud-Ouest
+              Basée à <strong>Saint-Christoly-de-Blaye (33920)</strong><br />
+              Interventions principalement à distance pour gérer vos appels et messages patients<br />
+              Déplacements ponctuels possibles en Gironde et en Charente 
             </p>
           </div>
 
@@ -24,6 +24,7 @@ export default function Footer() {
               <li><Link href="/" className="text-white text-decoration-none">Accueil</Link></li>
               <li><Link href="/services" className="text-white text-decoration-none">Services</Link></li>
               <li><Link href="/about" className="text-white text-decoration-none">À propos</Link></li>
+              <li><Link href="/tarifs" className="text-white text-decoration-none">Tarifs</Link></li>
               <li><Link href="/contact" className="text-white text-decoration-none">Contact</Link></li>
               <li className="mt-2">
                 <Link href="/mentions-legales" className="text-white text-decoration-none">
@@ -107,7 +108,7 @@ export default function Footer() {
         <hr className="border-light opacity-25" />
 
         <p className="text-center small mb-0">
-          © 2026 Nathalie Darnaudat – Assistante administrative indépendante
+          © 2026 Nathalie Darnaudat | Télésecrétaire – Assistante administrative indépendante
         </p>
       </div>
     </footer>

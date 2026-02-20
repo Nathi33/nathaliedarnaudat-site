@@ -1,15 +1,15 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Mes Services – Nathalie Darnaudat',
-  description: 'Découvrez les services proposés par Nathalie Darnaudat : gestion administrative, accompagnement création d’entreprise, communication digitale et assistance pour particuliers.',
+  title: 'Services de télésecrétariat médical et paramédical – Nathalie Darnaudat',
+  description: 'Découvrez mes prestations de télésecrétariat pour médecins, infirmiers, kinés, ostéopathes et psychologues : gestion des appels patients, prise de messages, filtrage et organisation. Offrez-vous plus de sérénité au cabinet.',
   openGraph: {
-    title: 'Mes Services – Nathalie Darnaudat',
-    description: 'Découvrez les services proposés par Nathalie Darnaudat : gestion administrative, accompagnement création d’entreprise, communication digitale et assistance pour particuliers.',
+    title: 'Services de télésecrétariat médical et paramédical – Nathalie Darnaudat',
+    description: 'Découvrez mes prestations de télésecrétariat pour médecins, infirmiers, kinés, ostéopathes et psychologues : gestion des appels patients, prise de messages, filtrage et organisation. Offrez-vous plus de sérénité au cabinet.',
     url: 'https://www.nathaliedarnaudat.fr/services',
     siteName: 'Nathalie Darnaudat',
     images: [
-      { url: '/images/og-services.webp', width: 1200, height: 630, alt: 'Services Nathalie Darnaudat' },
+      { url: '/images/og-services.webp', width: 1200, height: 630, alt: 'Services télésecrétariat Nathalie Darnaudat' },
     ],
     locale: 'fr_FR',
     type: 'website',
@@ -25,86 +25,91 @@ export default function Services() {
         <div className="text-center mb-2" data-aos="fade-up">
           <h1 className="display-5 fw-bold mb-5">Mes services</h1>
           <p className="mb-1" data-aos-delay="100">
-            J’accompagne les professionnels et les particuliers dans la gestion de leurs démarches
-            administratives, avec des prestations adaptées à chaque situation.
+            J’accompagne les professionnels de santé (médecins, infirmiers, kinésithérapeutes, ostéopathes, psychologues) dans la gestion de 
+            leurs appels patients, messages, rendez-vous et organisation administrative, pour leur permettre de se concentrer sur leurs patients.
           </p>
         </div>
 
         {/* Zone géographique */}
         <div className="bg-light p-4 rounded mb-4" data-aos="fade-up" data-aos-delay="200">
           <p className="mb-0">
-            Basée à <strong>Saint-Christoly-de-Blaye (33)</strong>, j’interviens en
-            <strong> Gironde</strong> et en <strong>Charente Maritime</strong>, en présentiel ou à distance.
+            Basée à <strong>Saint-Christoly-de-Blaye, en Gironde (33)</strong>, j’interviens principalement à distance pour gérer vos appels et messages patients.
+            Au besoin, je peux me déplacer temporairement pour vous rencontrer personnellement ou vous assister avec vos outils informatiques.
           </p>
         </div>
 
         {/* Navigation interne */}
         <div className="d-flex flex-wrap justify-content-center gap-3 mb-5 navigation-interne" data-aos="fade-up" data-aos-delay="300">
-          <a href="#gestion" className="btn btn-turquoise">Gestion administrative</a>
-          <a href="#creation" className="btn btn-turquoise">Création d’entreprise</a>
-          <a href="#particuliers" className="btn btn-turquoise">Particuliers</a>
-          <a href="#communication" className="btn btn-turquoise">Communication</a>
+          <a href="#accueil" className="btn btn-turquoise">Accueil téléphonique</a>
+          <a href="#messages" className="btn btn-turquoise">Prise de messages</a>
+          <a href="#filtrage" className="btn btn-turquoise">Filtrage urgences</a>
+          <a href="#organisation" className="btn btn-turquoise">Organisation sur mesure</a>
+          <a href="#plannings" className="btn btn-turquoise">Gestion des plannings</a>
         </div>
 
         {/* Service 1 */}
-        <div id="gestion" className="mb-5" data-aos="fade-up" data-aos-delay="100">
-          <h2>Gestion administrative</h2>
+        <div id="accueil" className="mb-5" data-aos="fade-up" data-aos-delay="100">
+          <h2>Accueil téléphonique patients</h2>
           <p>
-            Je prends en charge tout ou partie de votre administratif afin de vous permettre
-            de vous concentrer sur votre activité principale.
+            Réponse professionnelle et bienveillante à vos appels pour un accueil rassurant de vos patients.
           </p>
           <ul>
-            <li>Classement et organisation des documents</li>
-            <li>Création et suivi des devis et factures</li>
-            <li>Relances clients et suivi des impayés</li>
-            <li>Rédaction de courriers professionnels</li>
-            <li>Suivi administratif courant</li>
+            <li>Gestion des appels entrants</li>
+            <li>Accueil chaleureux et professionnel</li>
+            <li>Transmission rapide des informations importantes</li>
           </ul>
         </div>
 
         {/* Service 2 */}
-        <div id="creation" className="mb-5" data-aos="fade-up" data-aos-delay="200">
-          <h2>Accompagnement à la création d’entreprise</h2>
+        <div id="messages" className="mb-5" data-aos="fade-up" data-aos-delay="200">
+          <h2>Prise de messages</h2>
           <p>
-            Un accompagnement personnalisé pour vous aider à démarrer votre activité
-            sereinement et en toute conformité.
+            Collecte d’informations précises et transmission claire selon vos consignes.
           </p>
           <ul>
-            <li>Aide aux formalités administratives</li>
-            <li>URSSAF, INPI, organismes compétents</li>
-            <li>Conseils organisationnels</li>
-            <li>Suivi des premières démarches</li>
+            <li>Prise de messages détaillés</li>
+            <li>Transmission rapide et sécurisée</li>
+            <li>Respect du secret professionnel</li>
           </ul>
         </div>
 
         {/* Service 3 */}
-        <div id="particuliers" className="mb-5" data-aos="fade-up" data-aos-delay="300">
-          <h2>Assistance administrative pour particuliers</h2>
+        <div id="filtrage" className="mb-5" data-aos="fade-up" data-aos-delay="300">
+          <h2>Filtrage des urgences</h2>
           <p>
-            Je vous accompagne dans vos démarches administratives souvent complexes ou chronophages,
-            avec pédagogie et confidentialité.
+            Priorisation des appels selon l’urgence et vos instructions
           </p>
           <ul>
-            <li>Dossiers CAF, retraite, sécurité sociale</li>
-            <li>Aide aux démarches en ligne</li>
-            <li>Classement et constitution de dossiers</li>
-            <li>Accompagnement personnalisé</li>
-            <li>Aide à la réalisation de CV</li>
+            <li>Détection et gestion des situations urgentes</li>
+            <li>Réorientation si nécessaire</li>
+            <li>Suivi personnalisé</li>
           </ul>
         </div>
 
         {/* Service 4 */}
-        <div id="communication" className="mb-5" data-aos="fade-up" data-aos-delay="400">
-          <h2>Communication digitale et visuelle</h2>
+        <div id="organisation" className="mb-5" data-aos="fade-up" data-aos-delay="400">
+          <h2>Organisation sur mesure</h2>
           <p>
-            Des supports simples et efficaces pour améliorer votre visibilité
-            sans complexité technique.
+            Adaptation complète à votre fonctionnement pour un cabinet efficace et serein.
           </p>
           <ul>
-            <li>Création de logos et visuels simples</li>
-            <li>Création ou refonte de sites vitrines simples</li>
-            <li>Mise à jour de contenus sur site existant</li>
-            <li>Conseils en présentation visuelle et identité graphique</li>
+            <li>Structuration des processus internes selon vos besoins</li>
+            <li>Gestion des appels entrants et messages selon vos consignes</li>
+            <li>Interlocutrice unique dédiée</li>
+            <li>Optimisation de l’accueil et du suivi patients</li>
+          </ul>
+        </div>
+
+        {/* Service 5 */}
+        <div id="plannings" className="mb-5" data-aos="fade-up" data-aos-delay="450">
+          <h2>Gestion des plannings</h2>
+          <p>
+            Je m’occupe de l’organisation et du suivi précis de vos rendez-vous patients pour éviter les conflits et optimiser votre emploi du temps.
+          </p>
+          <ul>
+            <li>Planification et suivi des rendez-vous</li>
+            <li>Rappels aux patients si nécessaire</li>
+            <li>Optimisation de l’agenda pour gagner du temps</li>
           </ul>
         </div>
 
@@ -125,9 +130,10 @@ export default function Services() {
 
       {/* CTA */}
       <div className="text-center mb-5" data-aos="fade-up" data-aos-delay="500">
-        <h3 className="mb-3">Besoin d’un accompagnement administratif ?</h3>
+        <h3 className="mb-3">Et si vous gagniez du temps et de la sérénité au cabinet ?</h3>
+        <p>Je m’occupe de vos appels et messages, vous vous concentrez sur vos patients.</p>
         <Link href="/contact" className="btn btn-turquoise btn-lg">
-          Contactez-moi
+          Parlons de vos besoins
         </Link>
       </div>
     </section>
