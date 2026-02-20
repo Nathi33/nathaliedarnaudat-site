@@ -63,7 +63,7 @@ export default function ContactForm() {
     <>
       {success && (
         <div ref={successRef} className="alert alert-success text-center">
-          Merci pour votre message. Je reviens vers vous sous 24 à 48 heures ouvrées.
+          Merci pour votre demande de télésecrétariat. Je vous recontacte sous 24 à 48 heures ouvrées.
         </div>
       )}
 
@@ -86,9 +86,9 @@ export default function ContactForm() {
         <div className="row">
           <div className="col-md-6 mb-3">
             <label className="form-label">
-              Nom / Entreprise <span className="text-danger">*</span>
+              Nom / Cabinet <span className="text-danger">*</span>
             </label>
-            <input type="text" name="nom" className="form-control" required />
+            <input type="text" name="nom" aria-required="true" className="form-control" required />
           </div>
 
           <div className="col-md-6 mb-3">
@@ -101,27 +101,28 @@ export default function ContactForm() {
           <label className="form-label">
             Téléphone <span className="text-danger">*</span>
           </label>
-          <input type="tel" name="telephone" className="form-control" required />
+          <input type="tel" name="telephone" aria-required="true" className="form-control" required />
         </div>
 
         <div className="mb-3">
           <label className="form-label">
             Adresse e-mail <span className="text-danger">*</span>
           </label>
-          <input type="email" name="email" className="form-control" required />
+          <input type="email" name="email" aria-required="true" className="form-control" required />
         </div>
 
         <div className="mb-3">
           <label className="form-label">
-            Type de demande <span className="text-danger">*</span>
+            Spécialité du professionnel de santé <span className="text-danger">*</span>
           </label>
-          <select name="demande" className="form-select" required>
+          <select name="demande" aria-required="true" className="form-select" required>
             <option value="">Choisir...</option>
-            <option>Gestion administrative</option>
-            <option>Création d’entreprise</option>
-            <option>Assistance particuliers</option>
-            <option>Communication / site web</option>
-            <option>Autre demande</option>
+            <option>Médecin</option>
+            <option>Infirmier</option>
+            <option>Kinésithérapeute</option>
+            <option>Ostéopathe</option>
+            <option>Psychologue</option>
+            <option>Autre</option>
           </select>
         </div>
 
@@ -129,7 +130,7 @@ export default function ContactForm() {
           <label className="form-label">
             Message <span className="text-danger">*</span>
           </label>
-          <textarea name="message" rows="5" className="form-control" required />
+          <textarea name="message" rows="5" placeholder="Expliquez votre demande (prise d'appels, suivi patients…)" aria-required="true" className="form-control" required />
         </div>
 
         {/* RGPD */}

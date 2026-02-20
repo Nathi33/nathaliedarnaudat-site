@@ -12,6 +12,7 @@ export default function Navbar() {
     { href: '/', label: 'Accueil' },
     { href: '/services', label: 'Mes services' },
     { href: '/about', label: 'À propos' },
+    { href: '/tarifs', label: 'Tarifs' },
     { href: '/contact', label: 'Contact' },
   ];
 
@@ -55,7 +56,7 @@ export default function Navbar() {
               <li key={link.href} className="nav-item">
                 <Link
                   href={link.href}
-                  className={`nav-link ${pathname === link.href ? 'active fw-bold' : ''}`}
+                  className={`nav-link ${pathname === link.href || pathname.startsWith(link.href + '/') ? 'active fw-bold' : ''}`}
                   onClick={handleLinkClick}
                 >
                   {link.label}

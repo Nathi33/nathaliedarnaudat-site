@@ -119,7 +119,7 @@ h1, h2, h3 {
 }
 
 /****** Services ******/
-#gestion, #creation, #particuliers, #communication {
+#accueil, #messages, #filtrage, #organisation, #plannings {
   scroll-margin-top: 100px;
 }
 
@@ -138,6 +138,45 @@ h1, h2, h3 {
   margin-bottom: 0.5rem;
 }
 
+/****** Tarifs ******/
+.section-tarifs {
+  position: relative;
+  padding-top: 7rem; 
+  padding-bottom: 3rem;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.section-tarifs .card {
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-tarifs .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.section-tarifs .card.border-primary {
+  border-width: 2px;
+  border-color: #8B2F78 !important;
+}
+
+.section-tarifs h1 {
+  margin-bottom: 5rem; 
+}
+
+.section-tarifs .row.g-4 {
+  margin-bottom: 4rem;
+}
+
+.section-tarifs .accordion-button {
+  font-weight: 500;
+}
+
+.section-tarifs .accordion-body {
+  color: #555;
+}
+
 /****** Contact ******/
 .contact-link {
   color: #6A1857;
@@ -149,6 +188,11 @@ h1, h2, h3 {
   color: #6A1857;
   font-weight: bold;
   transform: translateX(6px);
+}
+
+/****** Localisation ******/
+.section-localisation {
+  padding-top: 7rem; 
 }
 
 /****** Légales ******/
