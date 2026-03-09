@@ -1,4 +1,22 @@
+/***** TYPOGRAPHIE OFFICIELLE *****/
+:root {
+
+  --color-bordeaux: #6A1857;
+  --color-prune: #8B2F78;
+  --color-turquoise: #15848F;
+
+  --font-title: 'Playfair Display', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-signature: 'Great Vibes', cursive;
+
+}
+
 /****** Style Général ******/
+body {
+  font-family: var(--font-body);
+  color: #333;
+}
+
 section {
   position: relative;
   padding: 0; 
@@ -11,8 +29,27 @@ section {
 }
 
 h1, h2, h3 {
+  font-family: var(--font-title);
   margin-top: 0;
   margin-bottom: 2rem;
+  
+}
+
+h1 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h2, h3 {
+  font-weight: 600;
 }
 
 .section-after-wave .container {
@@ -23,9 +60,21 @@ h1, h2, h3 {
   padding-bottom: 2rem; 
 }
 
+.text-brand {
+  color: var(--color-turquoise)
+}
+
+/***** Signature *****/
+.signature {
+  font-family: var(--font-signature);
+  color: var(--color-turquoise);
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.2;
+}
+
 /****** Boutons ******/
 .btn-turquoise {
-  background-color: #00CED1;
+  background-color: var(--color-turquoise);
   color: #fff; 
   border: none;
   font-weight: bold;
@@ -34,19 +83,25 @@ h1, h2, h3 {
 
 .btn-turquoise:hover {
   background-color: #fff;
-  color: #00CED1;
-  border: 2px solid #00CED1;
+  color: var(--color-turquoise);
+  border: 2px solid var(--color-turquoise);
   transform: translateY(-2px);
 }
 
 /****** Navbar ******/
+.navbar-brand {
+  font-family: var(--font-title);
+}
+
 .nav-link {
+  font-family: var(--font-body);
+  font-weight: 500;
   color: #fff !important;
   transition: color 0.3s, font-weight 0.3s;
 }
 
 .nav-link:hover {
-  color: #00CED1 !important;
+  color: var(--color-turquoise) !important;
 }
 
 .nav-link.active {
@@ -62,7 +117,7 @@ h1, h2, h3 {
 }
 
 .hero-section h1 {
-  color: #6A1857;
+  color: var(--color-bordeaux);
 }
 
 .hero-section h2 {
@@ -119,7 +174,7 @@ h1, h2, h3 {
 }
 
 /****** Services ******/
-#accueil, #messages, #filtrage, #organisation, #plannings {
+#accueil, #messages, #urgences, #agenda, #appels {
   scroll-margin-top: 100px;
 }
 
@@ -158,7 +213,7 @@ h1, h2, h3 {
 
 .section-tarifs .card.border-primary {
   border-width: 2px;
-  border-color: #8B2F78 !important;
+  border-color: var(--color-prune) !important;
 }
 
 .section-tarifs h1 {
@@ -177,15 +232,30 @@ h1, h2, h3 {
   color: #555;
 }
 
+.tarifs-link {
+  color: var(--color-bordeaux);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.tarifs-link:hover {
+  color: var(--color-bordeaux);
+  font-weight: bold;
+  transform: translateX(6px);
+}
+
 /****** Contact ******/
+.section-contact, .section-legal, .section-privacy, .section-localisation {
+  margin-top: 5rem !important;
+}
 .contact-link {
-  color: #6A1857;
+  color: var(--color-bordeaux);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .contact-link:hover {
-  color: #6A1857;
+  color: var(--color-bordeaux);
   font-weight: bold;
   transform: translateX(6px);
 }
@@ -197,18 +267,22 @@ h1, h2, h3 {
 
 /****** Légales ******/
 .legal-link {
-  color: #00CED1;
+  color: var(--color-bordeaux);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .legal-link:hover {
-  color: #00CED1;
+  color: var(--color-bordeaux);
   font-weight: bold;
   transform: translateX(6px);
 }
 
 /****** Footer ******/
+footer h5 {
+  font-family: var(--font-title);
+}
+
 footer li {
   transition: all 0.3s ease;
 }

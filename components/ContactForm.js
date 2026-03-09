@@ -9,6 +9,7 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const successRef = useRef(null);
   const errorRef = useRef(null);
+  const firstInputRef = useRef(null);
 
   // Scroll vers une ref avec offset pour navbar fixe
   const scrollToRef = (ref) => {
@@ -31,7 +32,7 @@ export default function ContactForm() {
     }
   }, [success, error]);
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
     setError(false);
 
@@ -40,35 +41,50 @@ export default function ContactForm() {
 
     setLoading(true);
 
-    emailjs
-      .sendForm(
+    try {
+      await emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         e.target,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-      )
-      .then(() => {
-        setSuccess(true);
-        e.target.reset();
-        scrollToRef(successRef);
-      })
-      .catch(() => {
-        setError(true);
-        scrollToRef(errorRef);
-      })
-      .finally(() => setLoading(false));
+      );
+      setSuccess(true);
+      e.target.reset();
+      // Réinitialiser la case RGPD
+      e.target.rgpd.checked = false;
+      // Scroll vers message succès
+      scrollToRef(successRef);
+      // Focus sur le premier input pour nouvelle saisie
+      firstInputRef.current?.focus();
+    } catch (err) {
+      console.error(err);
+      setError(true);
+      scrollToRef(errorRef);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <>
       {success && (
-        <div ref={successRef} className="alert alert-success text-center">
+        <div
+          ref={successRef}
+          className="alert alert-success text-center"
+          role="alert"
+          aria-live="polite"
+        >
           Merci pour votre demande de télésecrétariat. Je vous recontacte sous 24 à 48 heures ouvrées.
         </div>
       )}
 
       {error && (
-        <div ref={errorRef} className="alert alert-danger text-center">
+        <div
+          ref={errorRef}
+          className="alert alert-danger text-center"
+          role="alert"
+          aria-live="polite"
+        >
           Une erreur est survenue lors de l’envoi du message. Merci de réessayer.
         </div>
       )}
@@ -88,7 +104,14 @@ export default function ContactForm() {
             <label className="form-label">
               Nom / Cabinet <span className="text-danger">*</span>
             </label>
-            <input type="text" name="nom" aria-required="true" className="form-control" required />
+            <input
+              type="text"
+              name="nom"
+              aria-required="true"
+              className="form-control"
+              required
+              ref={firstInputRef}
+            />
           </div>
 
           <div className="col-md-6 mb-3">
@@ -130,15 +153,21 @@ export default function ContactForm() {
           <label className="form-label">
             Message <span className="text-danger">*</span>
           </label>
-          <textarea name="message" rows="5" placeholder="Expliquez votre demande (prise d'appels, suivi patients…)" aria-required="true" className="form-control" required />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Expliquez votre demande (prise d'appels, suivi patients…)"
+            aria-required="true"
+            className="form-control"
+            required
+          />
         </div>
 
         {/* RGPD */}
         <div className="form-check mb-4">
           <input className="form-check-input" type="checkbox" id="rgpd" required />
           <label className="form-check-label" htmlFor="rgpd">
-            J’accepte que mes données soient utilisées pour être recontacté(e).
-            <span className="text-danger"> *</span>
+            J’accepte que mes données soient utilisées pour être recontacté(e).<span className="text-danger"> *</span>
           </label>
         </div>
 
