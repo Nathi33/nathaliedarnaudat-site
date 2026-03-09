@@ -29,6 +29,11 @@ import BootstrapJSLoader from '../components/BootstrapJSLoader';
 
 import { organizationStructuredData } from '../lib/structuredData';
 
+export const metadata = {
+  metadataBase: new URL('https://www.nathaliedarnaudat.fr'),
+  title: 'Télésecrétariat médical pour médecins et infirmiers libéraux – Nathalie Darnaudat',
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="fr" className={`${playfair.variable} ${montserrat.variable} ${greatVibes.variable}`}>

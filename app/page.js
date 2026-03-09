@@ -4,6 +4,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Télésecrétariat médical pour médecins et infirmiers libéraux – Nathalie Darnaudat',
   description: 'Télésecrétaire indépendante spécialisée dans la gestion des appels et des agendas pour médecins et infirmiers libéraux. Accueil patient professionnel, gestion des urgences et prise de rendez-vous.',
+  metadataBase: new URL("https://www.nathaliedarnaudat.fr"),
   openGraph: {
     title: 'Télésecrétariat médical pour médecins et infirmiers libéraux – Nathalie Darnaudat',
     description: 'Service de télésecrétariat médical à distance : gestion des appels patients, prise de rendez-vous et organisation du cabinet.',
