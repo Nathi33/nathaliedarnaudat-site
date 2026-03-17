@@ -7,6 +7,7 @@ export default function ContactForm() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+
   const successRef = useRef(null);
   const errorRef = useRef(null);
   const firstInputRef = useRef(null);
@@ -15,8 +16,11 @@ export default function ContactForm() {
   const scrollToRef = (ref) => {
     if (!ref.current) return;
     const topOffset = 100;
+    const rect = ref.current.getBoundingClientRect();
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
     window.scrollTo({
-      top: ref.current.offsetTop - topOffset,
+      top: rect.top + scrollTop - topOffset,
       behavior: 'smooth',
     });
   };
@@ -34,6 +38,8 @@ export default function ContactForm() {
 
   const sendEmail = async (e) => {
     e.preventDefault();
+
+    setSuccess(false);
     setError(false);
 
     const form = e.currentTarget;
@@ -44,23 +50,42 @@ export default function ContactForm() {
     setLoading(true);
 
     try {
+      // Envoi principal vers moi
       await emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         form,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
+
+      // Réponse automatique vers le client
+      // Si échoue, succès global non bloqué
+      try {
+        await emailjs.sendForm(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_AUTOREPLY_TEMPLATE_ID,
+          form,
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        );
+      } catch (autoReplyErr) {
+        console.warn("Réponse automatique EmailJS non envoyée : ", autoReplyErr);
+      }
+
       setSuccess(true);
       form.reset();
       
       // Scroll vers message succès
-      scrollToRef(successRef);
-      // Focus sur le premier input pour nouvelle saisie
-      firstInputRef.current?.focus();
+      setTimeout(() => {
+        scrollToRef(successRef);
+        firstInputRef.current?.focus();
+      }, 50);
     } catch (err) {
       console.error('Erreur EmailJS :', err);
       setError(true);
-      scrollToRef(errorRef);
+
+      setTimeout(() => {
+        scrollToRef(errorRef);
+      }, 50); 
     } finally {
       setLoading(false);
     }
@@ -84,9 +109,9 @@ export default function ContactForm() {
           ref={errorRef}
           className="alert alert-danger text-center"
           role="alert"
-          aria-live="polite"
+          aria-live="assertive"
         >
-          Une erreur est survenue lors de l’envoi du message. Merci de réessayer.
+          Une erreur est survenue lors de l’envoi du message. Merci de réessayer ou de me contacter directement à <strong>contact@nathaliedarnaudat.fr</strong>.
         </div>
       )}
 
@@ -97,7 +122,7 @@ export default function ContactForm() {
           if (error) setError(false);
         }}
       >
-        {/* Honeypot */}
+        {/* Honeypot anti-spam */}
         <input type="text" name="website" className="d-none" tabIndex="-1" autoComplete="off" />
 
         <div className="row">
@@ -126,7 +151,7 @@ export default function ContactForm() {
           <label htmlFor="telephone" className="form-label">
             Téléphone <span className="text-danger">*</span>
           </label>
-          <input id="telephone" type="tel" name="telephone" aria-required="true" className="form-control" required />
+          <input id="telephone" type="tel" name="telephone" aria-required="true" className="form-control" pattern="^(\+33|0)[1-9]([\s.-]?\d{2}){4}$" title="Veuillez saisir un numéro de téléphone valide" required  />
         </div>
 
         <div className="mb-3">
@@ -161,6 +186,7 @@ export default function ContactForm() {
             rows="5"
             placeholder="Expliquez votre demande (prise d'appels, suivi patients…)"
             aria-required="true"
+            minLength={20}
             className="form-control"
             required
           />
@@ -168,7 +194,7 @@ export default function ContactForm() {
 
         {/* RGPD */}
         <div className="form-check mb-4">
-          <input className="form-check-input" type="checkbox" id="rgpd" name="rgpd" required />
+          <input className="form-check-input" type="checkbox" id="rgpd" name="rgpd" value="Oui" required />
           <label className="form-check-label" htmlFor="rgpd">
             J’accepte que mes données soient utilisées pour être recontacté(e).<span className="text-danger"> *</span>
           </label>

@@ -61,15 +61,15 @@ h2, h3 {
 }
 
 .text-brand {
-  color: var(--color-turquoise)
+  color: var(--color-turquoise)!important
 }
 
 /***** Signature *****/
 .signature {
-  font-family: var(--font-signature);
-  color: var(--color-turquoise);
-  font-size: clamp(32px, 4vw, 48px);
-  line-height: 1.2;
+  font-family: var(--font-signature) !important;
+  color: var(--color-turquoise) !important;
+  font-size: clamp(32px, 4vw, 48px) !important;
+  line-height: 1.2 !important;
 }
 
 /****** Boutons ******/
@@ -122,6 +122,19 @@ h2, h3 {
 
 .hero-section h2 {
   font-weight: 500;
+}
+
+.hero-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-section .row {
+  flex-wrap: wrap;
+}
+
+.hero-section, .section-with-wave-bottom {
+  overflow-x: hidden;
 }
 
 /* Wave Divider */
