@@ -71,12 +71,12 @@ export default function Footer() {
             <h5 className="fw-bold">Contact</h5>
             <p className="mb-1">
               <a 
-                href="mailto:nathalie.drnt@outlook.fr" 
+                href="mailto:contact@nathaliedarnaudat.fr" 
                 className="footer-link d-inline-flex align-items-center"
                 title="Envoyer un email à Nathalie Darnaudat"
               >
                 <i className="bi bi-envelope me-2" aria-hidden="true"></i>
-                nathalie.drnt@outlook.fr
+                contact@nathaliedarnaudat.fr
               </a>
             </p>
             <p className="mb-1">

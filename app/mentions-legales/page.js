@@ -40,7 +40,7 @@ export default function MentionsLegales() {
             <strong>Siège Social :</strong> 33700 Mérignac, France<br />
             <strong>SIRET :</strong> 99334942200010<br />
             <strong>Téléphone :</strong> <Link href="tel:0763499510" className='legal-link' aria-label="Appeler Nathalie Darnaudat" rel="noopener noreferrer">07 63 49 95 10</Link><br />
-            <strong>Email :</strong> <Link href="mailto:nathalie.drnt@outlook.fr" className='legal-link' aria-label="Écrire à Nathalie Darnaudat" rel="noopener noreferrer">nathalie.drnt@outlook.fr</Link>
+            <strong>Email :</strong> <Link href="mailto:contact@nathaliedarnaudat.fr" className='legal-link' aria-label="Écrire à Nathalie Darnaudat" rel="noopener noreferrer">contact@nathaliedarnaudat.fr</Link>
           </p>
         </div>
 
@@ -110,7 +110,7 @@ export default function MentionsLegales() {
               "streetAddress": "Saint-Christoly-de-Blaye",
               "addressLocality": "Saint-Christoly-de-Blaye",
               "addressRegion": "Gironde",
-              "postalCode": "33700",
+              "postalCode": "33920",
               "addressCountry": "FR"
             }
           })

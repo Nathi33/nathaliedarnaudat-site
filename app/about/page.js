@@ -206,7 +206,7 @@ export default function About() {
               "streetAddress": "Saint-Christoly-de-Blaye",
               "addressLocality": "Saint-Christoly-de-Blaye",
               "addressRegion": "Gironde",
-              "postalCode": "33700",
+              "postalCode": "33920",
               "addressCountry": "FR"
             }
           }),

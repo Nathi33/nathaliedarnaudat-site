@@ -59,7 +59,7 @@ export default function PolitiqueConfidentialite() {
             <h2>Droits des utilisateurs</h2>
             <p>
               Conformément à la réglementation RGPD, vous disposez d’un droit d’accès, de modification et de suppression de vos données. 
-              Pour exercer ces droits, contactez <Link href="mailto:nathalie.drnt@outlook.fr" className='legal-link' aria-label="Écrire à Nathalie Darnaudat" rel="noopener noreferrer">nathalie.drnt@outlook.fr</Link>.
+              Pour exercer ces droits, contactez <Link href="mailto:contact@nathaliedarnaudat.fr" className='legal-link' aria-label="Écrire à Nathalie Darnaudat" rel="noopener noreferrer">contact@nathaliedarnaudat.fr</Link>.
             </p>
           </div>
 
@@ -96,7 +96,7 @@ export default function PolitiqueConfidentialite() {
               "streetAddress": "Saint-Christoly-de-Blaye",
               "addressLocality": "Saint-Christoly-de-Blaye",
               "addressRegion": "Gironde",
-              "postalCode": "33700",
+              "postalCode": "33920",
               "addressCountry": "FR"
             }
           }),

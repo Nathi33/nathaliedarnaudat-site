@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 export default function ContactForm() {
   const [success, setSuccess] = useState(false);
@@ -36,8 +36,10 @@ export default function ContactForm() {
     e.preventDefault();
     setError(false);
 
+    const form = e.currentTarget;
+
     // Honeypot anti-spam
-    if (e.target.website.value) return;
+    if (form.website.value) return;
 
     setLoading(true);
 
@@ -45,19 +47,18 @@ export default function ContactForm() {
       await emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        e.target,
+        form,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
       setSuccess(true);
-      e.target.reset();
-      // Réinitialiser la case RGPD
-      e.target.rgpd.checked = false;
+      form.reset();
+      
       // Scroll vers message succès
       scrollToRef(successRef);
       // Focus sur le premier input pour nouvelle saisie
       firstInputRef.current?.focus();
     } catch (err) {
-      console.error(err);
+      console.error('Erreur EmailJS :', err);
       setError(true);
       scrollToRef(errorRef);
     } finally {
@@ -97,14 +98,15 @@ export default function ContactForm() {
         }}
       >
         {/* Honeypot */}
-        <input type="text" name="website" className="d-none" />
+        <input type="text" name="website" className="d-none" tabIndex="-1" autoComplete="off" />
 
         <div className="row">
           <div className="col-md-6 mb-3">
-            <label className="form-label">
+            <label htmlFor="nom" className="form-label">
               Nom / Cabinet <span className="text-danger">*</span>
             </label>
             <input
+              id="nom"
               type="text"
               name="nom"
               aria-required="true"
@@ -115,30 +117,30 @@ export default function ContactForm() {
           </div>
 
           <div className="col-md-6 mb-3">
-            <label className="form-label">Prénom</label>
-            <input type="text" name="prenom" className="form-control" />
+            <label htmlFor="prenom" className="form-label">Prénom</label>
+            <input id="prenom" type="text" name="prenom" className="form-control" />
           </div>
         </div>
 
         <div className="mb-3">
-          <label className="form-label">
+          <label htmlFor="telephone" className="form-label">
             Téléphone <span className="text-danger">*</span>
           </label>
-          <input type="tel" name="telephone" aria-required="true" className="form-control" required />
+          <input id="telephone" type="tel" name="telephone" aria-required="true" className="form-control" required />
         </div>
 
         <div className="mb-3">
-          <label className="form-label">
+          <label htmlFor="email" className="form-label">
             Adresse e-mail <span className="text-danger">*</span>
           </label>
-          <input type="email" name="email" aria-required="true" className="form-control" required />
+          <input id="email" type="email" name="email" aria-required="true" className="form-control" required />
         </div>
 
         <div className="mb-3">
-          <label className="form-label">
+          <label htmlFor="demande" className="form-label">
             Spécialité du professionnel de santé <span className="text-danger">*</span>
           </label>
-          <select name="demande" aria-required="true" className="form-select" required>
+          <select id="demande" name="demande" aria-required="true" className="form-select" required>
             <option value="">Choisir...</option>
             <option>Médecin</option>
             <option>Infirmier</option>
@@ -150,10 +152,11 @@ export default function ContactForm() {
         </div>
 
         <div className="mb-4">
-          <label className="form-label">
+          <label htmlFor="message" className="form-label">
             Message <span className="text-danger">*</span>
           </label>
           <textarea
+            id="message"
             name="message"
             rows="5"
             placeholder="Expliquez votre demande (prise d'appels, suivi patients…)"
@@ -165,7 +168,7 @@ export default function ContactForm() {
 
         {/* RGPD */}
         <div className="form-check mb-4">
-          <input className="form-check-input" type="checkbox" id="rgpd" required />
+          <input className="form-check-input" type="checkbox" id="rgpd" name="rgpd" required />
           <label className="form-check-label" htmlFor="rgpd">
             J’accepte que mes données soient utilisées pour être recontacté(e).<span className="text-danger"> *</span>
           </label>
@@ -174,7 +177,7 @@ export default function ContactForm() {
         <button type="submit" className="btn btn-turquoise" disabled={loading}>
           {loading ? (
             <>
-              <span className="spinner-border spinner-border-sm me-2"></span>
+              <span className="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>
               Envoi en cours...
             </>
           ) : (

@@ -2,19 +2,31 @@ import ContactForm from '../../components/ContactForm';
 
 export const metadata = {
   title: 'Contactez votre télésecrétaire médicale et paramédicale – Nathalie Darnaudat',
-  description: 'Contactez Nathalie Darnaudat, télésecrétaire indépendante pour médecins et infirmiers libéraux. Gestion des appels patients, messages et agenda médical à distance.',
+  description:
+    'Contactez Nathalie Darnaudat, télésecrétaire indépendante pour médecins et infirmiers libéraux. Gestion des appels patients, messages et agenda médical à distance.',
+  alternates: {
+    canonical: 'https://www.nathaliedarnaudat.fr/contact',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: 'Contactez votre télésecrétaire médicale et paramédicale – Nathalie Darnaudat',
-    description: 'Contactez Nathalie Darnaudat, télésecrétaire indépendante pour médecins et infirmiers libéraux. Gestion des appels patients, messages et agenda médical à distance.',
+    description:
+      'Contactez Nathalie Darnaudat, télésecrétaire indépendante pour médecins et infirmiers libéraux. Gestion des appels patients, messages et agenda médical à distance.',
     url: 'https://www.nathaliedarnaudat.fr/contact',
     siteName: 'Nathalie Darnaudat',
     images: [
-      { url: '/images/og-Contact.webp', width: 1200, height: 630, alt: 'Contact télésecétariat médical Nathalie Darnaudat' },
+      {
+        url: '/images/og-Contact.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Contact télésecrétariat médical Nathalie Darnaudat',
+      },
     ],
     locale: 'fr_FR',
     type: 'website',
-    robots: 'index, follow',
-    canonical: 'https://www.nathaliedarnaudat.fr/contact'
   },
 };
 
@@ -50,8 +62,8 @@ export default function Contact() {
                 </p>
                 <p className="mb-2">
                   <i className="bi bi-envelope me-2 text-brand" aria-hidden="true"></i>
-                  <a href="mailto:nathalie.drnt@outlook.fr" className='contact-link' rel="noopener noreferrer">
-                    nathalie.drnt@outlook.fr
+                  <a href="mailto:contact@nathaliedarnaudat.fr" className='contact-link' rel="noopener noreferrer">
+                    contact@nathaliedarnaudat.fr
                   </a>
                 </p>
                 <p className="mb-2">
@@ -109,7 +121,7 @@ export default function Contact() {
               "streetAddress": "Saint-Christoly-de-Blaye",
               "addressLocality": "Saint-Christoly-de-Blaye",
               "addressRegion": "Gironde",
-              "postalCode": "33700",
+              "postalCode": "33920",
               "addressCountry": "FR"
             }
           }),
