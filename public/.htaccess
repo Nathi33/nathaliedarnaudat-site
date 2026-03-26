@@ -1,0 +1,31 @@
+# Activer le moteur de réécriture
+RewriteEngine On
+
+# --------------------------
+# 1️⃣ Redirection HTTP -> HTTPS
+# --------------------------
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.nathaliedarnaudat.fr/$1 [R=301,L]
+
+# --------------------------
+# 2️⃣ Redirection non-www -> www
+# --------------------------
+RewriteCond %{HTTP_HOST} ^nathaliedarnaudat\.fr [NC]
+RewriteRule ^(.*)$ https://www.nathaliedarnaudat.fr/$1 [R=301,L]
+
+# --------------------------
+# 3️⃣ Options SEO supplémentaires
+# --------------------------
+# Forcer la dernière version des fichiers et éviter le hotlinking des images
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# --------------------------
+# 4️⃣ Compression Gzip pour performance
+# --------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>

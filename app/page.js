@@ -5,6 +5,13 @@ export const metadata = {
   title: 'Télésecrétariat médical pour médecins et infirmiers libéraux – Nathalie Darnaudat',
   description: 'Télésecrétaire indépendante spécialisée dans la gestion des appels et des agendas pour médecins et infirmiers libéraux. Accueil patient professionnel, gestion des urgences et prise de rendez-vous.',
   metadataBase: new URL("https://www.nathaliedarnaudat.fr"),
+  alternates: {
+    canonical: 'https://www.nathaliedarnaudat.fr',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: 'Télésecrétariat médical pour médecins et infirmiers libéraux – Nathalie Darnaudat',
     description: 'Service de télésecrétariat médical à distance : gestion des appels patients, prise de rendez-vous et organisation du cabinet.',
@@ -20,8 +27,6 @@ export const metadata = {
     ],
     locale: 'fr_FR',
     type: 'website',
-    robots: 'index, follow',
-    canonical: 'https://www.nathaliedarnaudat.fr'
   },
 };
 

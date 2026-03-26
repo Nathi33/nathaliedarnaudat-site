@@ -4,6 +4,9 @@ import Link from 'next/link';
 export const metadata = {
   title: 'À propos – Télésecrétariat pour médecins et infirmiers libéraux – Nathalie Darnaudat',
   description: 'Télésecrétaire indépendante spécialisée pour médecins et infirmiers libéraux : découvrez mon parcours, mes compétences et ma mission pour gérer vos appels et votre agenda à distance, et libérer votre temps et sérénité.',
+  alternates: {
+    canonical: 'https://www.nathaliedarnaudat.fr/about', // <-- ici
+  },
   openGraph: {
     title: 'À propos – Télésecrétariat pour médecins et infirmiers libéraux – Nathalie Darnaudat',
     description: 'Télésecrétaire indépendante spécialisée pour médecins et infirmiers libéraux : découvrez mon parcours, mes compétences et ma mission pour gérer vos appels et votre agenda à distance, et libérer votre temps et sérénité.',
@@ -14,8 +17,6 @@ export const metadata = {
     ],
     locale: 'fr_FR',
     type: 'website',
-    robots: 'index, follow',
-    canonical: 'https://www.nathaliedarnaudat.fr/about'
   },
 };
 

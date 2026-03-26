@@ -3,6 +3,13 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Mentions légales – Nathalie Darnaudat',
   description: "Mentions légales du site de Nathalie Darnaudat, assistante administrative indépendante en Gironde et Charente. Télésecrétariat médical et paramédical, gestion d'appels et dossiers patients.",
+  alternates: {
+    canonical: 'https://www.nathaliedarnaudat.fr/mentions-legales',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: 'Mentions légales – Nathalie Darnaudat',
     description: 'Mentions légales du site de Nathalie Darnaudat, assistante administrative indépendante en Gironde et Charente.',
@@ -13,9 +20,7 @@ export const metadata = {
     images: [
       { url: '/images/og-legal.webp', width: 1200, height: 630, alt: 'Mentions légales Nathalie Darnaudat' },
     ],
-    robots: 'index, follow',
-    canonical: 'https://www.nathaliedarnaudat.fr/mentions-legales'
-  }
+  },
 };
 
 export default function MentionsLegales() {

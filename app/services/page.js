@@ -3,6 +3,13 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Services de télésecrétariat médical pour médecins et infirmiers libéraux – Nathalie Darnaudat',
   description: 'Télésecrétariat médical à distance : gestion des appels patients, agenda, urgences médicales et messages pour médecins et infirmiers libéraux.',
+  alternates: {
+    canonical: 'https://www.nathaliedarnaudat.fr/services',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: 'Services de télésecrétariat médical pour médecins et infirmiers libéraux – Nathalie Darnaudat',
     description: 'Télésecrétariat médical à distance : gestion des appels patients, agenda, urgences médicales et messages pour médecins et infirmiers libéraux.',
@@ -13,8 +20,6 @@ export const metadata = {
     ],
     locale: 'fr_FR',
     type: 'website',
-    robots: 'index, follow',
-    canonical: 'https://www.nathaliedarnaudat.fr/services'
   },
 };
 
