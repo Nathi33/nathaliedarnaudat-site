@@ -2,7 +2,8 @@ import Link from 'next/link';
 
 export const metadata = {
   title: "Tarifs télésecrétariat médical pour médecins et infirmiers libéraux – Nathalie Darnaudat",
-  description: "Découvrez les packs de télésecrétariat médical pour médecins et infirmiers libéraux avec tarifs clairs, services inclus, options et possibilité de pack sur mesure.",
+  description:
+    "Découvrez mes formules de télésecrétariat médical à distance pour médecins, infirmiers libéraux et professionnels de santé : packs mensuels, options et offre sur mesure.",
   alternates: {
     canonical: 'https://www.nathaliedarnaudat.fr/tarifs',
   },
@@ -12,11 +13,17 @@ export const metadata = {
   },
   openGraph: {
     title: "Tarifs télésecrétariat médical pour médecins et infirmiers libéraux – Nathalie Darnaudat",
-    description: "Découvrez les packs de télésecrétariat médical pour médecins et infirmiers libéraux avec tarifs clairs, services inclus, options et possibilité de pack sur mesure.",
+    description:
+      "Découvrez mes formules de télésecrétariat médical à distance pour médecins, infirmiers libéraux et professionnels de santé : packs mensuels, options et offre sur mesure.",
     url: 'https://www.nathaliedarnaudat.fr/tarifs',
     siteName: 'Nathalie Darnaudat',
     images: [
-      { url: '/images/og-Tarifs.webp', width: 1200, height: 630, alt: 'Tarifs télésecrétariat médical Nathalie Darnaudat' },
+      {
+        url: '/images/og-Tarifs.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Tarifs télésecrétariat médical Nathalie Darnaudat',
+      },
     ],
     locale: 'fr_FR',
     type: 'website',
@@ -24,142 +31,343 @@ export const metadata = {
 };
 
 export default function Tarifs() {
+  const packs = [
+    {
+      name: 'Essentiel',
+      calls: 'Jusqu’à 80 appels traités / mois',
+      price: '159 € / mois',
+      overCall: '1,90 € / appel supplémentaire',
+      note: 'Idéal pour une activité avec volume modéré',
+      highlight: false,
+    },
+    {
+      name: 'Confort',
+      calls: 'Jusqu’à 130 appels traités / mois',
+      price: '219 € / mois',
+      overCall: '1,80 € / appel supplémentaire',
+      note: 'Idéal pour une activité régulière',
+      highlight: true,
+    },
+    {
+      name: 'Sérénité',
+      calls: 'Jusqu’à 190 appels traités / mois',
+      price: '289 € / mois',
+      overCall: '1,70 € / appel supplémentaire',
+      note: 'Idéal pour une activité soutenue',
+      highlight: false,
+    },
+    {
+      name: 'Performance',
+      calls: 'Jusqu’à 260 appels traités / mois',
+      price: '359 € / mois',
+      overCall: '1,60 € / appel supplémentaire',
+      note: 'Idéal pour une activité importante',
+      highlight: false,
+    },
+  ];
+
   return (
-    <section className="section-tarifs mt-5">
+    <section className="section-tarifs mt-4">
       <div className="container">
-        <h1 className="display-5 fw-bold mb-5 text-center" data-aos="fade-up">
-          Tarifs de votre télésecrétariat médical spécialisé pour médecins et infirmiers libéraux
-        </h1>
 
-        {/* Introduction */}
-        <div className="mb-5 text-center" data-aos="fade-up" data-aos-delay="100">
-          <p>
-            Je propose un service complet de <strong>télésecrétariat à distance</strong> pour médecins, infirmiers libéraux et autres professionnels paramédicaux. 
-            Chaque pack inclut les mêmes services essentiels, avec un <strong>socle inclus</strong> pour l’organisation, la personnalisation et la continuité du service.
+        {/* HERO */}
+        <div className="text-center mb-5 pb-3" data-aos="fade-up">
+          <h1 className="display-5 fw-bold mb-5">
+            Tarifs de télésecrétariat médical pour médecins et infirmiers libéraux
+          </h1>
+          <p className="lead mb-4">
+            Des formules claires et adaptées aux <strong>médecins libéraux</strong>, <strong>infirmiers libéraux</strong> et autres <strong>professionnels de santé</strong>,
+            avec un accompagnement humain, rigoureux et personnalisé.
           </p>
-          <p>
-            Pour des volumes supérieurs à 400 appels / mois ou des besoins spécifiques, je propose un <strong>pack sur mesure</strong>.
+          <p className="mb-0">
+            Chaque formule inclut un <strong>socle de service complet</strong> déjà intégré au tarif affiché :
+            mise en place de votre organisation, personnalisation des consignes, suivi du fonctionnement et continuité du service.
           </p>
         </div>
 
-        {/* Services inclus dans tous les packs */}
-        <div className="mb-5 mt-5" data-aos="fade-up" data-aos-delay="150">
-          <h2 className="text-center">Services inclus dans tous les packs</h2>
-          <ul className="list-unstyled">
-            <li className="mb-2"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Accueil téléphonique professionnel et personnalisé</li>
-            <li className="mb-2"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Gestion des appels entrants et sortants liés à la gestion courante</li>
-            <li className="mb-2"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Prise et transmission des messages selon vos consignes</li>
-            <li className="mb-2"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Prise, modification et annulation de rendez-vous, gestion de l’agenda</li>
-            <li className="mb-2"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Suivi du dossier client et adaptation à vos habitudes</li>
-            <li className="mb-2"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Respect strict du secret professionnel</li>
-          </ul>
+        {/* INCLUS DANS TOUS LES PACKS */}
+        <div className="mb-5 pb-3" data-aos="fade-up" data-aos-delay="100">
+          <h2 className="text-center mb-5">Ce qui est inclus dans toutes les formules</h2>
+
+          <div className="row justify-content-center">
+            <div className="col-lg-10">
+              <div className="p-4 p-md-5 rounded-4 border shadow-sm bg-white">
+                <ul className="list-unstyled mb-4">
+                  <li className="mb-3"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Accueil téléphonique professionnel et personnalisé au nom du cabinet</li>
+                  <li className="mb-3"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Gestion des appels entrants</li>
+                  <li className="mb-3"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Qualification des demandes et prise de messages détaillés</li>
+                  <li className="mb-3"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Transmission des messages selon vos consignes</li>
+                  <li className="mb-3"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Gestion des urgences selon le protocole défini ensemble</li>
+                  <li className="mb-3"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Prise, modification et annulation de rendez-vous</li>
+                  <li className="mb-3"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Gestion de l’agenda selon votre organisation</li>
+                  <li className="mb-3"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Appels sortants liés à la gestion courante si nécessaire</li>
+                  <li className="mb-0"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Suivi du fonctionnement et adaptation à vos habitudes</li>
+                </ul>
+
+                <p className="mb-0">
+                  <strong>Important :</strong> aucune information médicale n’est délivrée aux patients.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Grille des packs */}
-        <div className="mb-5" data-aos="fade-up" data-aos-delay="250">
-          <h2 className="text-center">Nos packs et tarifs</h2>
-          <div className="row g-4 justify-content-center mt-5">
-            {[
-              { name: 'Essentiel', calls: 'jusqu’à 80 appels / mois', price: 149, highlight: false, overCall: '1,40 €/appel supplémentaire' },
-              { name: 'Confort ⭐', calls: 'jusqu’à 170 appels / mois', price: 249, highlight: true, overCall: '1,35 €/appel supplémentaire' },
-              { name: 'Sérénité', calls: 'jusqu’à 300 appels / mois', price: 389, highlight: false, overCall: '1,30 €/appel supplémentaire' },
-              { name: 'Gros Volume / Personnalisé', calls: 'à partir de 400 appels / mois', price: 'sur devis', highlight: false, overCall: '1,20 €/appel supplémentaire' }
-            ].map((pack, i) => (
-              <div key={i} className="col-md-4" data-aos="fade-up" data-aos-delay={300 + i*50}>
-                <div className={`card h-100 d-flex flex-column shadow-sm ${pack.highlight ? 'border border-2 border-primary' : ''}`}>
-                  <div className="card-body d-flex flex-column">
-                    <h3 className="card-title text-center mb-3">🌿 Pack {pack.name}</h3>
-                    <p className="text-center text-muted mb-3">{pack.calls}</p>
-                    {pack.price !== 'sur devis' ? (
-                      <p className="fw-bold text-center mt-auto">💰 {pack.price} € / mois<br/><small className="text-muted">{pack.overCall}</small></p>
-                    ) : (
-                      <p className="fw-bold text-center mt-auto">💰 {pack.price}<br/><small className="text-muted">{pack.overCall}</small></p>
-                    )}
+        {/* FORMULES */}
+        <div className="mb-5 pb-3" data-aos="fade-up" data-aos-delay="150">
+          <h2 className="text-center mb-5">Mes formules mensuelles</h2>
+
+          <p className="text-center mb-5">
+            Le volume mensuel correspond aux <strong>appels effectivement traités dans le cadre de la prestation</strong>.
+          </p>
+
+          <div className="row g-4 justify-content-center">
+            {packs.map((pack, i) => (
+              <div
+                key={i}
+                className="col-xl-3 col-md-6"
+                data-aos="fade-up"
+                data-aos-delay={200 + i * 50}
+              >
+                <div
+                  className={`card h-100 d-flex flex-column shadow-sm rounded-4 border-2 ${
+                    pack.highlight
+                      ? 'border-primary'
+                      : 'border-light-subtle'
+                  }`}
+                >
+                  <div className="card-body d-flex flex-column p-4 p-lg-4">
+                    <div className="text-center mb-3">
+                      <h3 className="h4 fw-bold mb-3">
+                        {pack.highlight ? '⭐ ' : ''}Pack {pack.name}
+                      </h3>
+                      <p className="text-muted mb-3">{pack.calls}</p>
+                    </div>
+
+                    <div className="text-center mb-4">
+                      <p className="fw-bold fs-3 mb-2">{pack.price}</p>
+                      <p className="text-muted mb-0">{pack.overCall}</p>
+                    </div>
+
+                    <div className="mt-auto text-center">
+                      <p className="mb-0">
+                        <small>{pack.note}</small>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Pack sur mesure */}
+          <div className="row justify-content-center mt-4 mt-md-5">
+            <div className="col-lg-10" data-aos="fade-up" data-aos-delay="450">
+              <div className="card shadow-sm rounded-4 border-2 border-light-subtle">
+                <div className="card-body p-4 p-md-5 text-center">
+                  <h3 className="h3 fw-bold mb-3">Pack Gros Volume / Sur mesure</h3>
+                  <p className="text-muted mb-3">À partir de 300 appels traités / mois</p>
+                  <p className="fw-bold fs-4 mb-3">Sur devis</p>
+                  <p className="mb-0">
+                    Pour les volumes élevés, les organisations plus complexes, les besoins multi-sites
+                    ou les consignes spécifiques.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mini texte d'aide */}
+          <div className="text-center mt-5">
+            <p className="mb-0">
+              <strong>Vous hésitez entre deux formules ?</strong> Je vous oriente vers la solution la plus adaptée selon votre volume d’appels et votre organisation.
+            </p>
+          </div>
         </div>
 
-        {/* Options complémentaires */}
-        <div className="mb-5 mt-3" data-aos="fade-up" data-aos-delay="200">
-          <h2 className="text-center">Options complémentaires</h2>
-          <ul className="list-unstyled">
-            <li className="mb-2"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>SMS patients / rappels : 0,15 €/SMS</li>
-            <li className="mb-2"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Reporting mensuel détaillé : 15 €/mois</li>
-            <li className="mb-2"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Gestion multi-sites : 20 €/site supplémentaire</li>
-            <li className="mb-2"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Agenda professionnel dédié : 12 €/mois</li>
-            <li className="mb-2"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Synchronisation Google/Outlook/CalDav : 3,99 €/mois</li>
-            <li className="mb-2"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Application mobile : 2,50 €/mois</li>
-            <li className="mb-2"><i className="bi bi-check-lg text-brand me-2" aria-hidden="true"></i>Serveur Vocal Interactif (SVI) : 5,50 €/mois</li>
-          </ul>
+        {/* OPTIONS COMPLEMENTAIRES */}
+        <div className="mb-5 pb-3" data-aos="fade-up" data-aos-delay="200">
+          <h2 className="text-center mb-5">Options complémentaires</h2>
+
+          <div className="row justify-content-center">
+            <div className="col-lg-10">
+              <div className="p-4 p-md-5 rounded-4 border shadow-sm bg-white">
+                <ul className="list-unstyled mb-0">
+                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Agenda professionnel dédié : <strong>12 € / mois</strong></li>
+                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Synchronisation Google / Outlook / CalDav : <strong>3,99 € / mois</strong></li>
+                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Application mobile : <strong>2,50 € / mois</strong></li>
+                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>SVI (Serveur Vocal Interactif) : <strong>5,50 € / mois</strong></li>
+                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>SMS patients / rappels : <strong>0,15 € / SMS</strong></li>
+                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Reporting mensuel détaillé : <strong>15 € / mois</strong></li>
+                  <li className="mb-0"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Gestion multi-sites : <strong>20 € / mois / site supplémentaire</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* FAQ courte */}
-        <div data-aos="fade-up" data-aos-delay="350">
-          <h2 className="display-6 fw-bold mb-4 text-center">FAQ – Questions fréquentes</h2>
+        {/* OPTIONS AGENDA DEDIE */}
+        <div className="mb-5 pb-3" data-aos="fade-up" data-aos-delay="250">
+          <h2 className="text-center mb-5">Options disponibles avec l’agenda professionnel dédié</h2>
+
+          <div className="row justify-content-center">
+            <div className="col-lg-10">
+              <div className="p-4 p-md-5 rounded-4 border shadow-sm bg-white">
+                <p className="mb-4">
+                  Ces options sont disponibles <strong>uniquement si vous choisissez l’option Agenda professionnel dédié :</strong>
+                </p>
+
+                <ul className="list-unstyled mb-4 ps-4">
+                  <li className="mb-3"><i className="bi bi-calendar-check text-brand me-2" aria-hidden="true"></i>Prise de rendez-vous par internet : <strong>3,99 € / mois</strong></li>
+                  <li className="mb-3"><i className="bi bi-camera-video text-brand me-2" aria-hidden="true"></i>Téléconsultation : <strong>12,50 € / mois</strong></li>
+                  <li className="mb-0"><i className="bi bi-credit-card text-brand me-2" aria-hidden="true"></i>Prépaiement des rendez-vous : <strong>12,50 € / mois</strong></li>
+                </ul>
+
+                <p className="mb-0">
+                  Si vous utilisez déjà <strong>Doctolib, Maiia ou une autre solution externe</strong>,
+                  ces fonctionnalités relèvent directement de votre propre plateforme.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* FRAIS PONCTUELS */}
+        <div className="mb-5 pb-3" data-aos="fade-up" data-aos-delay="300">
+          <h2 className="text-center mb-5">Frais ponctuels éventuels</h2>
+
+          <div className="row justify-content-center">
+            <div className="col-lg-10">
+              <div className="p-4 p-md-5 rounded-4 border shadow-sm bg-white">
+                <ul className="list-unstyled mb-0">
+                  <li className="mb-3"><i className="bi bi-gear text-brand me-2" aria-hidden="true"></i>Mise en place de l’agenda professionnel dédié + import de données : <strong>50 €</strong></li>
+                  <li className="mb-0"><i className="bi bi-gear text-brand me-2" aria-hidden="true"></i>Configuration SVI : <strong>70 €</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* FAQ */}
+        <div className="mb-5" data-aos="fade-up" data-aos-delay="350">
+          <h2 className="display-6 fw-bold mb-5 text-center">FAQ – Questions fréquentes</h2>
+
           <div className="accordion" id="faqAccordion">
             <div className="accordion-item">
               <h2 className="accordion-header" id="faq1">
-                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                  Comment se déroule la gestion des appels entrants ?
+                <button
+                  className="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse1"
+                  aria-expanded="true"
+                  aria-controls="collapse1"
+                >
+                  Comment est calculé le volume mensuel ?
                 </button>
               </h2>
-              <div id="collapse1" className="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+              <div
+                id="collapse1"
+                className="accordion-collapse collapse show"
+                aria-labelledby="faq1"
+                data-bs-parent="#faqAccordion"
+              >
                 <div className="accordion-body">
-                  Tous vos appels sont pris selon vos consignes, avec gestion des urgences et transmission rapide des informations nécessaires.
+                  Le volume correspond aux appels effectivement traités dans le cadre de la prestation,
+                  incluant les appels entrants et, si nécessaire, certains appels sortants liés à la gestion courante du cabinet.
                 </div>
               </div>
             </div>
 
             <div className="accordion-item">
               <h2 className="accordion-header" id="faq2">
-                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                  Puis-je modifier mon pack en cours de mois ?
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse2"
+                  aria-expanded="false"
+                  aria-controls="collapse2"
+                >
+                  Que se passe-t-il en cas de dépassement ?
                 </button>
               </h2>
-              <div id="collapse2" className="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+              <div
+                id="collapse2"
+                className="accordion-collapse collapse"
+                aria-labelledby="faq2"
+                data-bs-parent="#faqAccordion"
+              >
                 <div className="accordion-body">
-                  Oui, vous pouvez ajuster votre pack, le nombre d’appels ou passer à un pack supérieur ; les tarifs seront recalculés au prorata.
+                  Les appels supplémentaires sont facturés selon le tarif prévu dans votre formule.
+                  Si les dépassements deviennent récurrents, une formule plus adaptée pourra vous être proposée.
                 </div>
               </div>
             </div>
 
             <div className="accordion-item">
               <h2 className="accordion-header" id="faq3">
-                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                  Comment sont facturés les appels supplémentaires ?
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse3"
+                  aria-expanded="false"
+                  aria-controls="collapse3"
+                >
+                  Puis-je faire évoluer ma formule ?
                 </button>
               </h2>
-              <div id="collapse3" className="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+              <div
+                id="collapse3"
+                className="accordion-collapse collapse"
+                aria-labelledby="faq3"
+                data-bs-parent="#faqAccordion"
+              >
                 <div className="accordion-body">
-                  Chaque appel supplémentaire est facturé selon le tarif indiqué dans le pack choisi : 1,40 € (Essentiel), 1,35 € (Confort), 1,30 € (Sérénité), 1,20 € (Gros Volume / Personnalisé).
+                  Oui. Votre formule peut être réévaluée si votre volume d’appels évolue
+                  ou si votre organisation change, afin de rester adaptée à votre activité réelle.
                 </div>
               </div>
             </div>
 
             <div className="accordion-item">
               <h2 className="accordion-header" id="faq4">
-                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                  Les options sont-elles incluses dans les packs ?
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse4"
+                  aria-expanded="false"
+                  aria-controls="collapse4"
+                >
+                  Les options sont-elles obligatoires ?
                 </button>
               </h2>
-              <div id="collapse4" className="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+              <div
+                id="collapse4"
+                className="accordion-collapse collapse"
+                aria-labelledby="faq4"
+                data-bs-parent="#faqAccordion"
+              >
                 <div className="accordion-body">
-                  Non, les options complémentaires sont disponibles en supplément selon vos besoins.
+                  Non. Les options sont entièrement facultatives et peuvent être activées
+                  selon vos besoins, sous réserve de compatibilité technique ou organisationnelle.
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* CTA final */}
-        <div className="text-center mt-5" data-aos="fade-up" data-aos-delay="400">
-          <Link href="/contact" className="btn btn-turquoise btn-lg">
-            Discutons ensemble de vos besoins
+        {/* CTA FINAL */}
+        <div className="text-center mt-5 pt-3" data-aos="fade-up" data-aos-delay="400">
+          <p className="mb-4 fs-5">
+            Besoin d’une formule adaptée à votre cabinet ?
+          </p>
+          <Link href="/contact" className="btn btn-turquoise btn-lg px-4 py-3">
+            Discutons de vos besoins
           </Link>
         </div>
+
       </div>
     </section>
   );
