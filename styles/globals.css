@@ -260,8 +260,9 @@ h3 {
 
 /****** Contact ******/
 .section-contact, .section-legal, .section-privacy, .section-localisation {
-  margin-top: 5rem !important;
+  padding-top: 5rem;
 }
+
 .contact-link {
   color: var(--color-bordeaux);
   text-decoration: none;

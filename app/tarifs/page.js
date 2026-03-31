@@ -184,47 +184,50 @@ export default function Tarifs() {
           </div>
         </div>
 
-        {/* OPTIONS COMPLEMENTAIRES */}
+        {/* OPTIONS COMPLEMENTAIRES RESTRUCTUREES */}
         <div className="mb-5 pb-3" data-aos="fade-up" data-aos-delay="200">
           <h2 className="text-center mb-5">Options complémentaires</h2>
 
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="p-4 p-md-5 rounded-4 border shadow-sm bg-white">
-                <ul className="list-unstyled mb-0">
-                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Agenda professionnel dédié : <strong>12 € / mois</strong></li>
-                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Synchronisation Google / Outlook / CalDav : <strong>3,99 € / mois</strong></li>
-                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Application mobile : <strong>2,50 € / mois</strong></li>
-                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>SVI (Serveur Vocal Interactif) : <strong>5,50 € / mois</strong></li>
-                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>SMS patients / rappels : <strong>0,15 € / SMS</strong></li>
-                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Reporting mensuel détaillé : <strong>15 € / mois</strong></li>
-                  <li className="mb-0"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Gestion multi-sites : <strong>20 € / mois / site supplémentaire</strong></li>
+                <p className="mb-4">
+                  Ces options sont disponibles pour compléter votre pack selon vos besoins.
+                </p>
+
+                <ul className="list-unstyled mb-0 ps-4">
+                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Agenda professionnel dédié <strong>12 € / mois</strong></li>
+                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Synchronisation Google / Outlook / CalDav <strong>3,99 € / mois</strong></li>
+                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Application mobile <strong>2,50 € / mois</strong></li>
+                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>SVI (Serveur Vocal Interactif) <strong>5,50 € / mois</strong></li>
+                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>SMS patients / rappels <strong>0,15 € / SMS</strong></li>
+                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Reporting mensuel détaillé <strong>15 € / mois</strong></li>
+                  <li className="mb-0"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Gestion multi-sites <strong>20 € / mois / site supplémentaire</strong></li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
 
-        {/* OPTIONS AGENDA DEDIE */}
+        {/* OPTIONS AVEC AGENDA DEDIE */}
         <div className="mb-5 pb-3" data-aos="fade-up" data-aos-delay="250">
-          <h2 className="text-center mb-5">Options disponibles avec l’agenda professionnel dédié</h2>
+          <h2 className="text-center mb-5">Options disponibles uniquement avec l’agenda professionnel dédié</h2>
 
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="p-4 p-md-5 rounded-4 border shadow-sm bg-white">
                 <p className="mb-4">
-                  Ces options sont disponibles <strong>uniquement si vous choisissez l’option Agenda professionnel dédié :</strong>
+                  Ces fonctionnalités sont disponibles <strong>uniquement si vous choisissez l’option Agenda professionnel dédié</strong>.
                 </p>
 
                 <ul className="list-unstyled mb-4 ps-4">
-                  <li className="mb-3"><i className="bi bi-calendar-check text-brand me-2" aria-hidden="true"></i>Prise de rendez-vous par internet : <strong>3,99 € / mois</strong></li>
-                  <li className="mb-3"><i className="bi bi-camera-video text-brand me-2" aria-hidden="true"></i>Téléconsultation : <strong>12,50 € / mois</strong></li>
-                  <li className="mb-0"><i className="bi bi-credit-card text-brand me-2" aria-hidden="true"></i>Prépaiement des rendez-vous : <strong>12,50 € / mois</strong></li>
+                  <li className="mb-3"><i className="bi bi-calendar-check text-brand me-2" aria-hidden="true"></i>Prise de rendez-vous par internet <strong>3,99 € / mois</strong></li>
+                  <li className="mb-3"><i className="bi bi-camera-video text-brand me-2" aria-hidden="true"></i>Téléconsultation <strong>12,50 € / mois</strong></li>
+                  <li className="mb-0"><i className="bi bi-credit-card text-brand me-2" aria-hidden="true"></i>Prépaiement des rendez-vous <strong>12,50 € / mois</strong></li>
                 </ul>
 
                 <p className="mb-0">
-                  Si vous utilisez déjà <strong>Doctolib, Maiia ou une autre solution externe</strong>,
-                  ces fonctionnalités relèvent directement de votre propre plateforme.
+                  Si vous utilisez déjà <strong>Doctolib, Maiia ou une autre solution externe</strong>, ces fonctionnalités relèvent de votre propre plateforme.
                 </p>
               </div>
             </div>
@@ -238,9 +241,12 @@ export default function Tarifs() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="p-4 p-md-5 rounded-4 border shadow-sm bg-white">
-                <ul className="list-unstyled mb-0">
-                  <li className="mb-3"><i className="bi bi-gear text-brand me-2" aria-hidden="true"></i>Mise en place de l’agenda professionnel dédié + import de données : <strong>50 €</strong></li>
-                  <li className="mb-0"><i className="bi bi-gear text-brand me-2" aria-hidden="true"></i>Configuration SVI : <strong>70 €</strong></li>
+                <p className="mb-4">
+                  Ces frais ponctuels concernent uniquement la mise en place ou la configuration initiale de certains services.
+                </p>
+                <ul className="list-unstyled mb-0 ps-4">
+                  <li className="mb-3"><i className="bi bi-gear text-brand me-2" aria-hidden="true"></i>Mise en place de l’agenda professionnel dédié + import de données <strong>50 €</strong></li>
+                  <li className="mb-0"><i className="bi bi-gear text-brand me-2" aria-hidden="true"></i>Configuration SVI <strong>70 €</strong></li>
                 </ul>
               </div>
             </div>

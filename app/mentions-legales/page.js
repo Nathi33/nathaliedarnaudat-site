@@ -25,7 +25,7 @@ export const metadata = {
 
 export default function MentionsLegales() {
   return (
-    <section className="section-legal bg-white position-relative mt-5">
+    <section className="section-legal bg-white position-relative">
       <div className="container py-5">
 
         {/* Titre */}

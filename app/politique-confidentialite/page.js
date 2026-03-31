@@ -26,7 +26,7 @@ export const metadata = {
 export default function PolitiqueConfidentialite() {
   return (
     <>
-      <section className="section-privacy bg-white position-relative mt-5">
+      <section className="section-privacy bg-white position-relative">
         <div className="container py-5">
 
           <div className="text-center mb-5" data-aos="fade-up">
