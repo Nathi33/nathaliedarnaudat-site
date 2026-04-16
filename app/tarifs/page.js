@@ -200,7 +200,6 @@ export default function Tarifs() {
                   <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Synchronisation Google / Outlook / CalDav <strong>3,99 € / mois</strong></li>
                   <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Application mobile <strong>2,50 € / mois</strong></li>
                   <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>SVI (Serveur Vocal Interactif) <strong>5,50 € / mois</strong></li>
-                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>SMS patients / rappels <strong>0,15 € / SMS</strong></li>
                   <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Reporting mensuel détaillé <strong>15 € / mois</strong></li>
                   <li className="mb-0"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>Gestion multi-sites <strong>20 € / mois / site supplémentaire</strong></li>
                 </ul>
@@ -222,6 +221,7 @@ export default function Tarifs() {
 
                 <ul className="list-unstyled mb-4 ps-4">
                   <li className="mb-3"><i className="bi bi-calendar-check text-brand me-2" aria-hidden="true"></i>Prise de rendez-vous par internet <strong>3,99 € / mois</strong></li>
+                  <li className="mb-3"><i className="bi bi-plus-circle text-brand me-2" aria-hidden="true"></i>SMS patients / rappels <strong>0,15 € / SMS</strong></li>
                   <li className="mb-3"><i className="bi bi-camera-video text-brand me-2" aria-hidden="true"></i>Téléconsultation <strong>12,50 € / mois</strong></li>
                   <li className="mb-0"><i className="bi bi-credit-card text-brand me-2" aria-hidden="true"></i>Prépaiement des rendez-vous <strong>12,50 € / mois</strong></li>
                 </ul>
