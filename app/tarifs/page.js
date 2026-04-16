@@ -35,33 +35,33 @@ export default function Tarifs() {
     {
       name: 'Essentiel',
       calls: 'Jusqu’à 80 appels traités / mois',
-      price: '159 € / mois',
+      price: '159 € HT / mois',
       overCall: '1,90 € / appel supplémentaire',
-      note: 'Idéal pour une activité avec volume modéré',
+      note: 'Idéal pour volume d’appels modéré',
       highlight: false,
     },
     {
       name: 'Confort',
       calls: 'Jusqu’à 130 appels traités / mois',
-      price: '219 € / mois',
+      price: '219 € HT / mois',
       overCall: '1,80 € / appel supplémentaire',
-      note: 'Idéal pour une activité régulière',
+      note: 'Pour une gestion fluide et sans interruption',
       highlight: true,
     },
     {
       name: 'Sérénité',
       calls: 'Jusqu’à 190 appels traités / mois',
-      price: '289 € / mois',
+      price: '289 € HT / mois',
       overCall: '1,70 € / appel supplémentaire',
-      note: 'Idéal pour une activité soutenue',
+      note: 'Idéal pour une délégation complète',
       highlight: false,
     },
     {
       name: 'Performance',
       calls: 'Jusqu’à 260 appels traités / mois',
-      price: '359 € / mois',
+      price: '359 € HT / mois',
       overCall: '1,60 € / appel supplémentaire',
-      note: 'Idéal pour une activité importante',
+      note: 'Idéal pour une forte activité',
       highlight: false,
     },
   ];
@@ -82,6 +82,9 @@ export default function Tarifs() {
           <p className="mb-0">
             Chaque formule inclut un <strong>socle de service complet</strong> déjà intégré au tarif affiché :
             mise en place de votre organisation, personnalisation des consignes, suivi du fonctionnement et continuité du service.
+          </p>
+          <p className="mt-3">
+            Vous choisissez un niveau de service adapté à votre activité, avec une visibilité claire sur votre budget mensuel.
           </p>
         </div>
 
@@ -146,6 +149,10 @@ export default function Tarifs() {
                     <div className="text-center mb-4">
                       <p className="fw-bold fs-3 mb-2">{pack.price}</p>
                       <p className="text-muted mb-0">{pack.overCall}</p>
+                      <p className="text-muted small mt-3">
+                        TVA non applicable – art. 293B du CGI<br />
+                        (TVA applicable selon réglementation en vigueur)
+                      </p>
                     </div>
 
                     <div className="mt-auto text-center">
@@ -180,6 +187,9 @@ export default function Tarifs() {
           <div className="text-center mt-5">
             <p className="mb-0">
               <strong>Vous hésitez entre deux formules ?</strong> Je vous oriente vers la solution la plus adaptée selon votre volume d’appels et votre organisation.
+            </p>
+            <p className="mt-3 text-muted small">
+              Les professionnels de santé assujettis à la TVA peuvent en récupérer le montant selon leur situation.
             </p>
           </div>
         </div>
@@ -278,7 +288,7 @@ export default function Tarifs() {
                 data-bs-parent="#faqAccordion"
               >
                 <div className="accordion-body">
-                  Le volume correspond aux appels effectivement traités dans le cadre de la prestation,
+                  Le volume mensuel correspond aux <strong>appels réellement traités pour votre cabinet</strong>,
                   incluant les appels entrants et, si nécessaire, certains appels sortants liés à la gestion courante du cabinet.
                 </div>
               </div>
