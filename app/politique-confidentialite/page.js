@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Politique de confidentialité – Nathalie Darnaudat',
   description: "Politique de confidentialité du site de Nathalie Darnaudat, assistante administrative indépendante en Gironde et Charente.",
   alternates: {
-    canonical: 'https://www.nathaliedarnaudat.fr/politique-confidentialite',
+    canonical: 'https://www.nathaliedarnaudat.fr/politique-confidentialite/',
   },
   robots: {
     index: true,
@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: 'Politique de confidentialité – Nathalie Darnaudat',
     description: "Protection de vos données personnelles et informations sur l’utilisation du site de Nathalie Darnaudat.",
-    url: 'https://www.nathaliedarnaudat.fr/politique-confidentialite',
+    url: 'https://www.nathaliedarnaudat.fr/politique-confidentialite/',
     siteName: 'Nathalie Darnaudat',
     images: [
       { url: '/images/og-legal.webp', width: 1200, height: 630, alt: 'Politique de confidentialité Nathalie Darnaudat' },

@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Mentions légales – Nathalie Darnaudat',
   description: "Mentions légales du site de Nathalie Darnaudat, assistante administrative indépendante en Gironde et Charente. Télésecrétariat médical et paramédical, gestion d'appels et dossiers patients.",
   alternates: {
-    canonical: 'https://www.nathaliedarnaudat.fr/mentions-legales',
+    canonical: 'https://www.nathaliedarnaudat.fr/mentions-legales/',
   },
   robots: {
     index: true,
@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: 'Mentions légales – Nathalie Darnaudat',
     description: 'Mentions légales du site de Nathalie Darnaudat, assistante administrative indépendante en Gironde et Charente.',
-    url: 'https://www.nathaliedarnaudat.fr/mentions-legales',
+    url: 'https://www.nathaliedarnaudat.fr/mentions-legales/',
     siteName: 'Nathalie Darnaudat',
     locale: 'fr_FR',
     type: 'website',

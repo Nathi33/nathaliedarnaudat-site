@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Services de télésecrétariat médical pour médecins et infirmiers libéraux – Nathalie Darnaudat',
   description: 'Télésecrétariat médical à distance : gestion des appels patients, agenda, urgences médicales et messages pour médecins et infirmiers libéraux.',
   alternates: {
-    canonical: 'https://www.nathaliedarnaudat.fr/services',
+    canonical: 'https://www.nathaliedarnaudat.fr/services/',
   },
   robots: {
     index: true,
@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: 'Services de télésecrétariat médical pour médecins et infirmiers libéraux – Nathalie Darnaudat',
     description: 'Télésecrétariat médical à distance : gestion des appels patients, agenda, urgences médicales et messages pour médecins et infirmiers libéraux.',
-    url: 'https://www.nathaliedarnaudat.fr/services',
+    url: 'https://www.nathaliedarnaudat.fr/services/',
     siteName: 'Nathalie Darnaudat',
     images: [
       { url: '/images/og-services.webp', width: 1200, height: 630, alt: 'Services télésecrétariat Nathalie Darnaudat' },
@@ -31,18 +31,18 @@ export default function Services() {
 
           {/* Intro */}
           <div className="text-center mb-2" data-aos="fade-up">
-            <h1 className="display-5 fw-bold mb-5">Services de télésecrétariat médical pour médecins et infirmiers libéraux</h1>
+            <h1 className="display-5 fw-bold mb-5">La gestion complète de votre secrétariat médical à distance</h1>
             <p className="mb-3" data-aos-delay="100">
-              Je propose un service de <strong>télésecrétariat médical à distance</strong> destiné principalement aux 
-              <strong> médecins et infirmiers libéraux</strong>, adapté aux contraintes spécifiques de chacun.
+              Je prends en charge l’ensemble de votre accueil téléphonique et de votre organisation administrative 
+              à distance afin de vous permettre de rester pleinement concentré sur vos consultations et vos patients.
             </p>
             <p className="mb-3" data-aos-delay="100">
-              J’assure la gestion de vos appels patients, la prise de messages, la gestion de votre agenda 
-              et l’identification des urgences selon vos consignes.
+              Chaque appel est traité selon vos consignes : identification du patient, analyse du motif, filtrage des urgences et 
+              transmission des informations importantes en temps réel.
             </p>
             <p className="mb-3" data-aos-delay="100">
-              J’accompagne également d’autres <strong>professionnels paramédicaux</strong> 
-              (kinésithérapeutes, ostéopathes, psychologues) selon leurs besoins.
+              Mon service s’adresse principalement aux médecins et infirmiers libéraux, mais peut également être adapté à 
+              d’autres professionnels paramédicaux ayant besoin d’un relais fiable pour la gestion de leurs appels et de leur agenda.
             </p>
           </div>
 

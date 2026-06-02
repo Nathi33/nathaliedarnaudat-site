@@ -5,12 +5,12 @@ export const metadata = {
   title: 'À propos – Télésecrétariat pour médecins et infirmiers libéraux – Nathalie Darnaudat',
   description: 'Télésecrétaire indépendante spécialisée pour médecins et infirmiers libéraux : découvrez mon parcours, mes compétences et ma mission pour gérer vos appels et votre agenda à distance, et libérer votre temps et sérénité.',
   alternates: {
-    canonical: 'https://www.nathaliedarnaudat.fr/about', // <-- ici
+    canonical: 'https://www.nathaliedarnaudat.fr/about/', 
   },
   openGraph: {
     title: 'À propos – Télésecrétariat pour médecins et infirmiers libéraux – Nathalie Darnaudat',
     description: 'Télésecrétaire indépendante spécialisée pour médecins et infirmiers libéraux : découvrez mon parcours, mes compétences et ma mission pour gérer vos appels et votre agenda à distance, et libérer votre temps et sérénité.',
-    url: 'https://www.nathaliedarnaudat.fr/about',
+    url: 'https://www.nathaliedarnaudat.fr/about/',
     siteName: 'Nathalie Darnaudat',
     images: [
       { url: '/images/og-About.webp', width: 1200, height: 630, alt: 'À propos de Nathalie Darnaudat' },
@@ -28,7 +28,7 @@ export default function About() {
         {/* Hero texte */}
         <div className="container">
           <div className="text-center mb-5" data-aos="fade-up">
-            <h1 className="display-5 fw-bold mb-3">Votre télésecrétariat médical simplifié</h1>
+            <h1 className="display-5 fw-bold mb-3">Une télésecrétaire médicale indépendante à vos côtés</h1>
             <p className="lead mb-0">
               Je libère les <strong>médecins et infirmiers libéraux</strong>, ainsi que les autres professionnels paramédicaux, des interruptions téléphoniques et de la gestion administrative pour qu’ils puissent se concentrer sur leurs patients.
             </p>
@@ -51,13 +51,23 @@ export default function About() {
             <div className="col-md-6 mt-4 mt-md-0" data-aos="fade-left">
               <h2 className="mb-3">Mon parcours</h2>
               <p>
-                Forte de plus de 10 ans d’expérience dans le secteur médico-social, j’ai acquis une expertise solide en gestion des appels, prise de messages et organisation administrative spécifique aux professionnels de santé.
+                Forte de plus de 10 ans d’expérience dans le secteur médico-social et administratif, j’ai développé au fil des années une solide expertise dans la gestion des appels, l’accueil téléphonique, la prise de messages et l’organisation administrative auprès de professionnels et d’usagers nécessitant écoute, rigueur et réactivité.
               </p>
+
               <p>
-                Aujourd’hui, je propose un service de télésecrétariat personnalisé pour médecins et infirmiers libéraux, en tenant compte des <strong>tournées et messages urgents propres à leur activité</strong>, ainsi que pour d’autres professionnels pramédicaux selon leurs besoins.<br/> Mon objectif : alléger votre quotidien, sécuriser vos échanges avec vos patients et optimiser votre organisation.
+                Cette expérience m’a permis de comprendre l’importance d’un accueil téléphonique de qualité, particulièrement dans le domaine de la santé où chaque appel peut représenter une demande urgente, une inquiétude ou un besoin d’accompagnement. J’ai appris à traiter chaque sollicitation avec professionnalisme, discrétion et bienveillance, tout en respectant les consignes et les priorités définies par les praticiens.
               </p>
+
               <p>
-                Ma méthodologie combine rigueur, réactivité et bienveillance, pour offrir un service fiable et adapté à chaque cabinet.
+                Aujourd’hui, j’ai choisi de mettre ces compétences au service des médecins libéraux, infirmiers libéraux et autres professionnels paramédicaux en proposant un service de télésecrétariat à distance personnalisé. Mon objectif est de vous permettre de rester pleinement concentré sur votre activité et sur vos patients, tout en assurant une continuité de service fiable et rassurante pour les personnes qui vous contactent.
+              </p>
+
+              <p>
+                Je prends le temps de comprendre le fonctionnement de chaque cabinet afin d’adapter mon intervention à votre organisation, vos habitudes et vos consignes. Chaque professionnel de santé travaille différemment et chaque patient mérite une réponse adaptée à sa situation.
+              </p>
+
+              <p>
+                Mon approche repose sur trois principes essentiels : la rigueur dans le traitement des demandes, la réactivité dans la transmission des informations importantes et la bienveillance dans la relation avec les patients. Cette combinaison me permet d’offrir un accompagnement humain, professionnel et durable, pensé pour simplifier votre quotidien tout en préservant la qualité de votre relation patient.
               </p>
             </div>
           </div>

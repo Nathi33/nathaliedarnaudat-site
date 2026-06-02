@@ -5,7 +5,7 @@ export const metadata = {
   description:
     "Découvrez mes formules de télésecrétariat médical à distance pour médecins, infirmiers libéraux et professionnels de santé : packs mensuels, options et offre sur mesure.",
   alternates: {
-    canonical: 'https://www.nathaliedarnaudat.fr/tarifs',
+    canonical: 'https://www.nathaliedarnaudat.fr/tarifs/',
   },
   robots: {
     index: true,
@@ -15,7 +15,7 @@ export const metadata = {
     title: "Tarifs télésecrétariat médical pour médecins et infirmiers libéraux – Nathalie Darnaudat",
     description:
       "Découvrez mes formules de télésecrétariat médical à distance pour médecins, infirmiers libéraux et professionnels de santé : packs mensuels, options et offre sur mesure.",
-    url: 'https://www.nathaliedarnaudat.fr/tarifs',
+    url: 'https://www.nathaliedarnaudat.fr/tarifs/',
     siteName: 'Nathalie Darnaudat',
     images: [
       {

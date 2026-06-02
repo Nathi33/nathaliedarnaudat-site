@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'Contactez Nathalie Darnaudat, télésecrétaire indépendante pour médecins et infirmiers libéraux. Gestion des appels patients, messages et agenda médical à distance.',
   alternates: {
-    canonical: 'https://www.nathaliedarnaudat.fr/contact',
+    canonical: 'https://www.nathaliedarnaudat.fr/contact/',
   },
   robots: {
     index: true,
@@ -15,7 +15,7 @@ export const metadata = {
     title: 'Contactez votre télésecrétaire médicale et paramédicale – Nathalie Darnaudat',
     description:
       'Contactez Nathalie Darnaudat, télésecrétaire indépendante pour médecins et infirmiers libéraux. Gestion des appels patients, messages et agenda médical à distance.',
-    url: 'https://www.nathaliedarnaudat.fr/contact',
+    url: 'https://www.nathaliedarnaudat.fr/contact/',
     siteName: 'Nathalie Darnaudat',
     images: [
       {

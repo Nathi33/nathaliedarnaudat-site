@@ -2,7 +2,7 @@ export const metadata = {
   title: 'Localisation – Nathalie Darnaudat',
   description: 'Localisation de Nathalie Darnaudat, télésecrétaire et assistante administrative indépendante à Saint-Christoly-de-Blaye (33), interventions à distance et ponctuellement sur place.',
   alternates: {
-    canonical: 'https://www.nathaliedarnaudat.fr/localisation',
+    canonical: 'https://www.nathaliedarnaudat.fr/localisation/',
   },
   robots: {
     index: true,
@@ -11,7 +11,7 @@ export const metadata = {
   openGraph: {
     title: 'Localisation – Nathalie Darnaudat',
     description: 'Localisation de Nathalie Darnaudat, télésecrétaire et assistante administrative indépendante à Saint-Christoly-de-Blaye (33).',
-    url: 'https://www.nathaliedarnaudat.fr/localisation',
+    url: 'https://www.nathaliedarnaudat.fr/localisation/',
     siteName: 'Nathalie Darnaudat',
     images: [
       { url: '/images/og-localisation.webp', width: 1200, height: 630, alt: 'Localisation de Nathalie Darnaudat' },
