@@ -1,9 +1,9 @@
 # Site vitrine – Nathalie Darnaudat  
-Télésecrétaire et assistante administrative indépendante - secteur médico-social
+Télésecrétaire indépendante - secteur médical et paramédical
 
 ## 🧾 Présentation du projet
 
-Ce projet est le **site vitrine officiel** de l’activité de Nathalie Darnaudat, spécialisée en télésecrétariat et assistance administrative pour les professionnels de santé et paramédicaux.
+Ce projet est le **site vitrine officiel** de l’activité de Nathalie Darnaudat, spécialisée en télésecrétariat pour les professionnels de santé et paramédicaux.
 
 Il a été conçu pour :
 - présenter clairement les services de télésecrétariat et de gestion administrative,

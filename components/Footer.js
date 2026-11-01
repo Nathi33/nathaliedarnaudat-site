@@ -11,7 +11,7 @@ export default function Footer() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Organization",
+          "@type": "ProfessionalService",
           "name": "Nathalie Darnaudat",
           "url": "https://www.nathaliedarnaudat.fr",
           "logo": "https://www.nathaliedarnaudat.fr/images/Logo.webp",
@@ -36,11 +36,10 @@ export default function Footer() {
           {/* Colonne 1 – Identité */}
           <div className="col-md-4 mb-4">
             <h5 className="fw-bold">Nathalie Darnaudat</h5>
-            <p className="mb-3">Télésecrétaire et assistante administrative indépendante, spécialisée médico-social</p>
+            <p className="mb-3">Télésecrétaire indépendante spécialisée dans le médical et paramédical</p>
             <p className="small mb-0">
               Basée à <strong>Saint-Christoly-de-Blaye (33920)</strong><br />
-              Interventions principalement à distance pour gérer vos appels et messages patients<br />
-              Déplacements ponctuels possibles en Gironde et en Charente 
+              Prestations à distance partout en France pour les professionnels et structures du secteur médical et paramédical.
             </p>
           </div>
 
@@ -138,7 +137,7 @@ export default function Footer() {
         <hr className="border-light opacity-25" />
 
         <p className="text-center small mb-0">
-          © 2026 Nathalie Darnaudat | Télésecrétaire – Assistante administrative indépendante
+          © 2026 Nathalie Darnaudat | Télésecrétaire médical et paramédical – Accueil téléphonique et gestion des agendas
         </p>
       </div>
     </footer>

@@ -21,11 +21,18 @@ export default function Navbar() {
   }, []);
 
   // Fonction pour fermer le menu quand on clique sur un lien
-  const handleLinkClick = () => {
+  const handleLinkClick = async () => {
     const navbarCollapse = document.getElementById('navbarContent');
-    if (navbarCollapse.classList.contains('show')) {
-      // On utilise l’API Collapse de Bootstrap
-      const collapse = bootstrap.Collapse.getInstance(navbarCollapse);
+
+    if (!navbarCollapse || !navbarCollapse.classList.contains('show')) {
+      return;
+    }
+
+    const { Collapse } = await import('bootstrap');
+
+    const collapse = Collapse.getInstance(navbarCollapse);
+
+    if (collapse) {
       collapse.hide();
     }
   };

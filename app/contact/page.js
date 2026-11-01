@@ -1,9 +1,9 @@
 import ContactForm from '../../components/ContactForm';
 
 export const metadata = {
-  title: 'Contactez votre télésecrétaire médicale et paramédicale – Nathalie Darnaudat',
+  title: 'Contact – Télésecrétariat médical et paramédical – Nathalie Darnaudat',
   description:
-    'Contactez Nathalie Darnaudat, télésecrétaire indépendante pour médecins et infirmiers libéraux. Gestion des appels patients, messages et agenda médical à distance.',
+    'Contactez Nathalie Darnaudat, télésecrétaire indépendante spécialisée dans le secteur médical et paramédical. Accueil téléphonique et gestion des agendas pour les professionnels et structures de santé.',
   alternates: {
     canonical: 'https://www.nathaliedarnaudat.fr/contact/',
   },
@@ -12,9 +12,9 @@ export const metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'Contactez votre télésecrétaire médicale et paramédicale – Nathalie Darnaudat',
+    title: 'Contact – Télésecrétariat médical et paramédical – Nathalie Darnaudat',
     description:
-      'Contactez Nathalie Darnaudat, télésecrétaire indépendante pour médecins et infirmiers libéraux. Gestion des appels patients, messages et agenda médical à distance.',
+      'Vous recherchez une solution de télésecrétariat médical et paramédical ? Contactez-moi pour échanger sur vos besoins en accueil téléphonique et gestion des agendas.',
     url: 'https://www.nathaliedarnaudat.fr/contact/',
     siteName: 'Nathalie Darnaudat',
     images: [
@@ -22,7 +22,7 @@ export const metadata = {
         url: '/images/og-Contact.webp',
         width: 1200,
         height: 630,
-        alt: 'Contact télésecrétariat médical Nathalie Darnaudat',
+        alt: 'Contact télésecrétariat médical et paramédical Nathalie Darnaudat',
       },
     ],
     locale: 'fr_FR',
@@ -35,44 +35,94 @@ export default function Contact() {
     <>
       <section className="section-contact bg-white py-5 mt-5">
         <div className="container">
-          {/* Intro */}
+
+          {/* INTRODUCTION */}
           <div className="text-center mb-5" data-aos="fade-up">
-            <h1 className="display-5 fw-bold mb-3">Contact</h1>
-            <p className="lead mb-0">
-              Vous souhaitez déléguer la gestion de vos appels et messages patients ? Que ce soit pour un besoin ponctuel ou un suivi régulier, je vous accompagne pour libérer votre temps et sécuriser vos échanges.
+            <h1 className="display-5 fw-bold mb-3">
+              Contactez-moi
+            </h1>
+
+            <p className="lead mb-3">
+              Vous êtes un professionnel du secteur médical ou paramédical
+              et souhaitez déléguer votre <strong>accueil téléphonique </strong>
+              ou la <strong>gestion de votre agenda</strong> ?
+            </p>
+
+            <p className="mb-0">
+              Que vous exerciez individuellement ou au sein d’un cabinet
+              regroupant plusieurs praticiens, je vous propose un accompagnement
+              adapté à votre activité et à votre organisation.
+              Parlons ensemble de vos besoins.
             </p>
           </div>
 
           <div className="row justify-content-center">
-            {/* Formulaire */}
+
+            {/* FORMULAIRE */}
             <div className="col-md-7" data-aos="fade-right">
               <div className="p-4 rounded shadow-sm">
-                <h2 className="h4 mb-4">Formulaire de contact</h2>
+                <h2 className="h4 mb-3">
+                  Formulaire de contact
+                </h2>
+
+                <p className="text-muted mb-4">
+                  Décrivez-moi votre activité, votre organisation et les
+                  prestations recherchées. Je reviendrai vers vous pour
+                  échanger sur votre projet.
+                </p>
+
                 <ContactForm />
               </div>
             </div>
 
-            {/* Infos contact */}
+            {/* COORDONNEES */}
             <div className="col-md-5 mb-4" data-aos="fade-left">
               <div className="p-4 bg-light rounded h-100">
-                <h2 className="h4 mb-3">Coordonnées</h2>
-                <p className="mb-2">
-                  <i className="bi bi-telephone me-2 text-brand" aria-hidden="true"></i>
-                  <a href="tel:+33763499510" className='contact-link' rel="noopener noreferrer">07 63 49 95 10</a>
+
+                <h2 className="h4 mb-4">
+                  Mes coordonnées
+                </h2>
+
+                <p className="mb-3">
+                  <i
+                    className="bi bi-telephone me-2 text-brand"
+                    aria-hidden="true"
+                  ></i>
+                  <a
+                    href="tel:+33763499510"
+                    className="contact-link"
+                  >
+                    07 63 49 95 10
+                  </a>
                 </p>
-                <p className="mb-2">
-                  <i className="bi bi-envelope me-2 text-brand" aria-hidden="true"></i>
-                  <a href="mailto:contact@nathaliedarnaudat.fr" className='contact-link' rel="noopener noreferrer">
+
+                <p className="mb-3">
+                  <i
+                    className="bi bi-envelope me-2 text-brand"
+                    aria-hidden="true"
+                  ></i>
+                  <a
+                    href="mailto:contact@nathaliedarnaudat.fr"
+                    className="contact-link"
+                  >
                     contact@nathaliedarnaudat.fr
                   </a>
                 </p>
-                <p className="mb-2">
-                  <i className="bi bi-geo-alt me-2 text-brand" aria-hidden="true"></i>
-                  Saint-Christoly-de-Blaye (33)
+
+                <p className="mb-3">
+                  <i
+                    className="bi bi-geo-alt me-2 text-brand"
+                    aria-hidden="true"
+                  ></i>
+                  Basée à Saint-Christoly-de-Blaye (Gironde – 33)
                 </p>
-                <p className="mb-0">
-                  <i className="bi bi-laptop me-2 text-brand" aria-hidden="true"></i>
-                  Intervention à distance ou ponctuellement en cabinet (Gironde & Charente)
+
+                <p className="mb-3">
+                  <i
+                    className="bi bi-laptop me-2 text-brand"
+                    aria-hidden="true"
+                  ></i>
+                  Prestations à distance partout en France
                 </p>
 
                 <hr />
@@ -89,22 +139,26 @@ export default function Contact() {
                     aria-label="Carte de Saint-Christoly-de-Blaye"
                   ></iframe>
                 </div>
+
               </div>
-            </div>       
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* JSON-LD Organisation pour SEO */}
+      {/* JSON-LD ORGANISATION POUR SEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Nathalie Darnaudat",
+            "@type": "ProfessionalService",
+            "name": "Nathalie Darnaudat – Télésecrétariat médical et paramédical",
             "url": "https://www.nathaliedarnaudat.fr",
             "logo": "https://www.nathaliedarnaudat.fr/images/Logo.webp",
+            "description":
+              "Télésecrétariat indépendant spécialisé dans le secteur médical et paramédical : accueil téléphonique et gestion des agendas pour les professionnels et structures de santé.",
             "sameAs": [
               "https://www.linkedin.com/company/nathalie-darnaudat-assistante-administrative",
               "https://www.facebook.com/profile.php?id=61587288295204"
@@ -112,17 +166,21 @@ export default function Contact() {
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+33 7 63 49 95 10",
+              "email": "contact@nathaliedarnaudat.fr",
               "contactType": "customer service",
               "areaServed": "FR",
               "availableLanguage": "fr"
             },
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Saint-Christoly-de-Blaye",
               "addressLocality": "Saint-Christoly-de-Blaye",
               "addressRegion": "Gironde",
               "postalCode": "33920",
               "addressCountry": "FR"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "France"
             }
           }),
         }}

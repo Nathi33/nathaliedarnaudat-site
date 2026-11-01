@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Services de télésecrétariat médical pour médecins et infirmiers libéraux – Nathalie Darnaudat',
-  description: 'Télésecrétariat médical à distance : gestion des appels patients, agenda, urgences médicales et messages pour médecins et infirmiers libéraux.',
+  title: 'Services de télésecrétariat médical et paramédical – Nathalie Darnaudat',
+  description: 'Découvrez mes services de télésecrétariat médical et paramédical : accueil téléphonique, gestion des appels patients et organisation des agendas des professionnels de santé.',
   alternates: {
     canonical: 'https://www.nathaliedarnaudat.fr/services/',
   },
@@ -11,12 +11,17 @@ export const metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'Services de télésecrétariat médical pour médecins et infirmiers libéraux – Nathalie Darnaudat',
-    description: 'Télésecrétariat médical à distance : gestion des appels patients, agenda, urgences médicales et messages pour médecins et infirmiers libéraux.',
+    title: 'Services de télésecrétariat médical et paramédical – Nathalie Darnaudat',
+    description: 'Accueil téléphonique, gestion des appels et des agendas pour les professionnels du secteur médical et paramédical.',
     url: 'https://www.nathaliedarnaudat.fr/services/',
     siteName: 'Nathalie Darnaudat',
     images: [
-      { url: '/images/og-services.webp', width: 1200, height: 630, alt: 'Services télésecrétariat Nathalie Darnaudat' },
+      {
+        url: '/images/og-services.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Services de télésecrétariat médical et paramédical – Nathalie Darnaudat',
+      },
     ],
     locale: 'fr_FR',
     type: 'website',
@@ -31,26 +36,38 @@ export default function Services() {
 
           {/* Intro */}
           <div className="text-center mb-2" data-aos="fade-up">
-            <h1 className="display-5 fw-bold mb-5">La gestion complète de votre secrétariat médical à distance</h1>
+            <h1 className="display-5 fw-bold mb-5">
+              Accueil téléphonique et gestion des agendas pour les professionnels de santé
+            </h1>
+
             <p className="mb-3" data-aos-delay="100">
-              Je prends en charge l’ensemble de votre accueil téléphonique et de votre organisation administrative 
-              à distance afin de vous permettre de rester pleinement concentré sur vos consultations et vos patients.
+              Je vous accompagne dans la gestion de vos appels téléphoniques
+              et de votre agenda afin de vous permettre de vous consacrer
+              pleinement à votre activité professionnelle.
             </p>
+
             <p className="mb-3" data-aos-delay="100">
-              Chaque appel est traité selon vos consignes : identification du patient, analyse du motif, filtrage des urgences et 
-              transmission des informations importantes en temps réel.
+              Chaque appel est traité selon vos consignes : identification
+              de l’interlocuteur, prise de messages, transmission des
+              informations importantes et gestion des rendez-vous.
             </p>
+
             <p className="mb-3" data-aos-delay="100">
-              Mon service s’adresse principalement aux médecins et infirmiers libéraux, mais peut également être adapté à 
-              d’autres professionnels paramédicaux ayant besoin d’un relais fiable pour la gestion de leurs appels et de leur agenda.
+              Mes prestations s’adressent aux professionnels du secteur
+              <strong> médical et paramédical</strong> souhaitant bénéficier
+              d’un accueil téléphonique professionnel et d’une gestion
+              organisée de leur agenda.
             </p>
           </div>
 
           {/* Zone géographique */}
           <div className="bg-light p-4 rounded mb-4" data-aos="fade-up" data-aos-delay="200">
             <p className="mb-0">
-              Basée à <strong>Saint-Christoly-de-Blaye, en Gironde (33)</strong>, j’interviens principalement <strong>à distance</strong> pour gérer vos appels patients et votre agenda médical.
-              Au besoin, je peux me déplacer temporairement pour vous rencontrer personnellement.
+              Basée à <strong>Saint-Christoly-de-Blaye, en Gironde (33)</strong>,
+              j’interviens à distance pour assurer la gestion de vos appels
+              et de votre agenda, où que vous soyez en France.
+              Chaque collaboration est adaptée à votre activité et à votre
+              organisation.
             </p>
           </div>
 
@@ -65,61 +82,89 @@ export default function Services() {
 
           {/* Service 1 */}
           <div id="accueil" className="mb-5" data-aos="fade-up" data-aos-delay="100">
-            <h2>Accueil téléphonique patients</h2>
+            <h2>Accueil téléphonique professionnel</h2>
+
             <p>
-              Je réponds aux appels de votre cabinet au nom de votre structure afin d’offrir à vos patients un accueil professionnel et rassurant.
+              Je prends en charge les appels de votre activité au nom de
+              votre structure afin d’offrir à vos patients un accueil
+              professionnel, chaleureux et rassurant.
             </p>
+
             <p>
-              Mes services s’adaptent également aux contraintes spécifiques des infirmiers libéraux, notamment pour la gestion des appels patients, l’organisation des tournées et la transmission des messages urgents.
+              Que vous exerciez en cabinet, en structure ou en activité
+              libérale, je m’adapte à votre fonctionnement et à vos
+              consignes pour assurer un accueil téléphonique de qualité.
             </p>
+
             <ul>
-              <li>Accueil téléphonique personnalisé au nom du cabinet</li>
-              <li>Identification du patient</li>
-              <li>Qualification du motif d’appel</li>
-              <li>Information pratique selon vos consignes (horaires, organisation du cabinet) </li>
+              <li>Accueil téléphonique personnalisé au nom de votre structure</li>
+              <li>Identification de l’interlocuteur</li>
+              <li>Identification du motif de l’appel</li>
+              <li>Communication des informations pratiques selon vos consignes</li>
+              <li>Orientation des appels vers les bons interlocuteurs</li>
             </ul>
           </div>
 
           {/* Service 2 */}
           <div id="messages" className="mb-5" data-aos="fade-up" data-aos-delay="200">
-            <h2>Prise de messages patients</h2>
+            <h2>Prise et transmission des messages</h2>
+
             <p>
-              Chaque appel est traité avec rigueur afin de vous transmettre des informations claires et exploitables.
+              Lorsqu’un appel nécessite votre intervention ou votre attention,
+              je recueille les informations nécessaires et vous les transmets
+              de manière claire et organisée.
             </p>
+
             <ul>
-              <li>Prise de messages détaillés</li>
-              <li>Transmission rapide via votre outil ou SMS</li>
-              <li>Priorisation des demandes importantes</li>
-              <li>Respect strict du secret professionnel</li>
+              <li>Prise de messages précis et détaillés</li>
+              <li>Recueil des coordonnées et du motif de l’appel</li>
+              <li>Transmission rapide via votre outil habituel ou SMS</li>
+              <li>Signalement des demandes nécessitant votre attention</li>
+              <li>Confidentialité des échanges et respect de vos consignes</li>
             </ul>
           </div>
 
           {/* Service 3 */}
           <div id="urgences" className="mb-5" data-aos="fade-up" data-aos-delay="300">
-            <h2>Identification et gestion des urgences médicales</h2>
+            <h2>Identification et transmission des situations urgentes</h2>
+
             <p>
-              Je détecte les situations urgentes et applique votre protocole afin de garantir une prise en charge rapide des patients concernés.       </p>
+              Certaines demandes nécessitent une attention particulière.
+              Selon les consignes et procédures que vous m’aurez définies,
+              j’identifie les situations devant vous être transmises
+              rapidement afin de faciliter leur prise en charge.
+            </p>
+
             <ul>
-              <li>Identification des situations urgentes</li>
-              <li>Application de vos consignes</li>
-              <li>Transfert immédiat vers vous si nécessaire</li>
-              <li>Priorisation des rappels urgents</li>
+              <li>Identification des appels nécessitant une transmission rapide</li>
+              <li>Application de vos consignes et procédures</li>
+              <li>Transmission immédiate des informations importantes</li>
+              <li>Priorisation des demandes selon vos indications</li>
             </ul>
           </div>
 
           {/* Service 4 */}
           <div id="agenda" className="mb-5" data-aos="fade-up" data-aos-delay="400">
-            <h2>Gestion de votre agenda médical</h2>
+            <h2>Gestion de votre agenda professionnel</h2>
+
             <p>
-              Je prends en charge l’organisation de vos rendez-vous afin d’optimiser votre planning et limiter les interruptions pendant vos consultations.
+              Je vous accompagne dans l’organisation de votre agenda afin
+              de faciliter la gestion de vos rendez-vous et de limiter
+              les interruptions liées aux appels téléphoniques.
             </p>
+
             <ul>
               <li>Prise de rendez-vous</li>
-              <li>Modification ou annulation</li>
-              <li>Optimisation des créneaux</li>
-              <li>Respect de vos consignes médicales</li>
+              <li>Modification et annulation des rendez-vous</li>
+              <li>Organisation des créneaux selon vos disponibilités</li>
+              <li>Respect de vos consignes et de votre fonctionnement</li>
+              <li>Suivi des demandes de rendez-vous</li>
             </ul>
-            <p className="mt-3"><strong>Compatible avec :</strong></p>
+
+            <p className="mt-3">
+              <strong>Selon les outils utilisés par votre activité :</strong>
+            </p>
+
             <ul className="list-unstyled">
               <li><i className="bi bi-check-lg text-brand me-2"></i>Doctolib</li>
               <li><i className="bi bi-check-lg text-brand me-2"></i>Maiia</li>
@@ -130,15 +175,19 @@ export default function Services() {
 
           {/* Service 5 */}
           <div id="appels" className="mb-5" data-aos="fade-up" data-aos-delay="450">
-            <h2>Appels sortants patients</h2>
+            <h2>Appels sortants et suivi des demandes</h2>
+
             <p>
-              Selon vos besoins, je peux également effectuer certains appels sortants afin de faciliter l’organisation du cabinet.
+              En complément de l’accueil téléphonique, je peux également
+              effectuer certains appels sortants selon vos besoins et
+              les modalités définies ensemble.
             </p>
+
             <ul>
               <li>Rappel de patients</li>
               <li>Confirmation de rendez-vous</li>
-              <li>Transmission d’informations</li>
-              <li>Coordination simple</li>
+              <li>Transmission d’informations pratiques</li>
+              <li>Suivi de certaines demandes</li>
             </ul>
           </div>
         </div>
@@ -158,8 +207,16 @@ export default function Services() {
 
         {/* CTA */}
         <div className="text-center mb-4" data-aos="fade-up" data-aos-delay="500">
-          <h3 className="mb-3">Et si vous déléguiez la gestion de vos appels patients ?</h3>
-          <p>Je prends en charge votre accueil téléphonique et l’organisation de votre agenda pour vous permettre de vous concentrer pleinement sur vos patients.</p>
+          <h3 className="mb-3">
+            Et si vous retrouviez du temps pour votre activité ?
+          </h3>
+
+          <p>
+            Je prends en charge votre accueil téléphonique et la gestion
+            de votre agenda pour vous permettre de vous consacrer pleinement
+            à vos patients et à votre activité.
+          </p>
+
           <Link href="/contact" className="btn btn-turquoise btn-lg">
             Parlons de vos besoins
           </Link>
@@ -167,37 +224,37 @@ export default function Services() {
       </section>
 
       {/* JSON-LD Organisation pour SEO */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Nathalie Darnaudat",
-              "url": "https://www.nathaliedarnaudat.fr",
-              "logo": "https://www.nathaliedarnaudat.fr/images/Logo.webp",
-              "sameAs": [
-                "https://www.linkedin.com/company/nathalie-darnaudat-assistante-administrative",
-                "https://www.facebook.com/profile.php?id=61587288295204"
-              ],
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+33 7 63 49 95 10",
-                "contactType": "customer service",
-                "areaServed": "FR",
-                "availableLanguage": "fr"
-              },
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Saint-Christoly-de-Blaye",
-                "addressLocality": "Saint-Christoly-de-Blaye",
-                "addressRegion": "Gironde",
-                "postalCode": "33920",
-                "addressCountry": "FR"
-              }
-            }),
-          }}
-        />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Nathalie Darnaudat",
+            "url": "https://www.nathaliedarnaudat.fr",
+            "logo": "https://www.nathaliedarnaudat.fr/images/Logo.webp",
+            "sameAs": [
+              "https://www.linkedin.com/company/nathalie-darnaudat-assistante-administrative",
+              "https://www.facebook.com/profile.php?id=61587288295204"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+33 7 63 49 95 10",
+              "contactType": "customer service",
+              "areaServed": "FR",
+              "availableLanguage": "fr"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Saint-Christoly-de-Blaye",
+              "addressLocality": "Saint-Christoly-de-Blaye",
+              "addressRegion": "Gironde",
+              "postalCode": "33920",
+              "addressCountry": "FR"
+            }
+          }),
+        }}
+      />
     </>
   );
 }
