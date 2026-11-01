@@ -31,7 +31,7 @@ import { organizationStructuredData } from '../lib/structuredData';
 
 export const metadata = {
   metadataBase: new URL('https://www.nathaliedarnaudat.fr'),
-  title: 'Télésecrétariat médical pour médecins et infirmiers libéraux – Nathalie Darnaudat',
+  title: 'Télésecrétariat médical et paramédical – Nathalie Darnaudat',
 };
 
 export default function RootLayout({ children }) {

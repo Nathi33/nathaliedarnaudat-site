@@ -2,18 +2,27 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'À propos – Télésecrétariat pour médecins et infirmiers libéraux – Nathalie Darnaudat',
-  description: 'Télésecrétaire indépendante spécialisée pour médecins et infirmiers libéraux : découvrez mon parcours, mes compétences et ma mission pour gérer vos appels et votre agenda à distance, et libérer votre temps et sérénité.',
+  title: 'À propos – Télésecrétariat médical et paramédical – Nathalie Darnaudat',
+  description: 'Découvrez Nathalie Darnaudat, télésecrétaire indépendante spécialisée dans le secteur médical et paramédical. Plus de 10 ans d’expérience et un accompagnement personnalisé pour la gestion de vos appels et agendas.',
   alternates: {
-    canonical: 'https://www.nathaliedarnaudat.fr/about/', 
+    canonical: 'https://www.nathaliedarnaudat.fr/about/',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
   openGraph: {
-    title: 'À propos – Télésecrétariat pour médecins et infirmiers libéraux – Nathalie Darnaudat',
-    description: 'Télésecrétaire indépendante spécialisée pour médecins et infirmiers libéraux : découvrez mon parcours, mes compétences et ma mission pour gérer vos appels et votre agenda à distance, et libérer votre temps et sérénité.',
+    title: 'À propos – Télésecrétariat médical et paramédical – Nathalie Darnaudat',
+    description: 'Une télésecrétaire indépendante à vos côtés pour assurer votre accueil téléphonique et la gestion de vos agendas.',
     url: 'https://www.nathaliedarnaudat.fr/about/',
     siteName: 'Nathalie Darnaudat',
     images: [
-      { url: '/images/og-About.webp', width: 1200, height: 630, alt: 'À propos de Nathalie Darnaudat' },
+      {
+        url: '/images/og-About-paramed.webp',
+        width: 1200,
+        height: 630,
+        alt: 'À propos de Nathalie Darnaudat, télésecrétaire indépendante',
+      },
     ],
     locale: 'fr_FR',
     type: 'website',
@@ -28,9 +37,16 @@ export default function About() {
         {/* Hero texte */}
         <div className="container">
           <div className="text-center mb-5" data-aos="fade-up">
-            <h1 className="display-5 fw-bold mb-3">Une télésecrétaire médicale indépendante à vos côtés</h1>
+            <h1 className="display-5 fw-bold mb-3">
+              Une télésecrétaire indépendante à vos côtés
+            </h1>
+
             <p className="lead mb-0">
-              Je libère les <strong>médecins et infirmiers libéraux</strong>, ainsi que les autres professionnels paramédicaux, des interruptions téléphoniques et de la gestion administrative pour qu’ils puissent se concentrer sur leurs patients.
+              J’accompagne les <strong>professionnels du secteur médical
+              et paramédical ainsi que les structures de santé </strong>
+              dans la gestion de leurs appels téléphoniques et de leurs
+              agendas, pour leur permettre de se consacrer pleinement
+              à leur activité et à leurs patients.
             </p>
           </div>
         </div>
@@ -43,8 +59,8 @@ export default function About() {
             <div className="col-md-5 mb-4 mb-md-0 d-flex align-items-center" data-aos="fade-right">
               <div className="text-center">
                 <Image
-                  src="/images/About.webp"
-                  alt="Télésecrétariat médical Nathalie Darnaudat"
+                  src="/images/About-paramed.webp"
+                  alt="Nathalie Darnaudat, télésecrétaire indépendante"
                   width={500}
                   height={500}
                   className="img-fluid rounded shadow"
@@ -62,19 +78,34 @@ export default function About() {
               <h2 className="mb-3">Mon parcours</h2>
 
               <p>
-                Avec plus de 10 ans d’expérience dans le secteur médico-social et administratif, j’ai développé une solide expertise dans la gestion des appels, l’accueil téléphonique et l’organisation des flux d’information.
+                Avec plus de <strong>10 ans d’expérience dans le secteur
+                médico-social et administratif</strong>, j’ai développé
+                une solide expertise dans la gestion des appels,
+                l’accueil téléphonique et l’organisation des flux
+                d’information.
               </p>
 
               <p>
-                J’ai travaillé au contact de professionnels de santé et d’usagers, ce qui m’a permis de comprendre les enjeux concrets d’un cabinet médical : urgence, charge mentale, interruptions constantes et importance de la qualité de communication.
+                Mon expérience au contact des professionnels de santé
+                et des usagers m’a permis de comprendre les enjeux
+                quotidiens de leurs activités : disponibilité,
+                interruptions téléphoniques, gestion des demandes
+                et importance d’une communication de qualité.
               </p>
 
               <p>
-                Cette expérience m’a naturellement orientée vers le télésecrétariat médical à distance, avec une approche centrée sur la fiabilité, la discrétion et la réactivité.
+                C’est naturellement que je me suis orientée vers
+                le télésecrétariat médical et paramédical à distance,
+                avec une approche fondée sur la fiabilité,
+                la discrétion et la réactivité.
               </p>
 
               <p>
-                Aujourd’hui, j’accompagne les médecins, infirmiers libéraux et professionnels paramédicaux en assurant la continuité téléphonique et la gestion administrative de leur activité, selon leurs consignes et leur organisation.
+                Aujourd’hui, je mets cette expérience au service
+                des professionnels de santé et des structures
+                regroupant plusieurs praticiens. J’assure leur
+                accueil téléphonique et la gestion de leurs agendas
+                en m’adaptant à leur organisation et à leurs consignes.
               </p>
             </div>
 
@@ -99,7 +130,8 @@ export default function About() {
           <div className="text-center mb-4" data-aos="fade-up">
             <h2>Mon approche</h2>
             <p className="text-muted">
-              Un service structuré, fiable et adapté aux exigences des professionnels de santé.
+              Un accompagnement personnalisé, fiable et adapté
+              aux besoins de chaque professionnel et de chaque structure.
             </p>
           </div>
 
@@ -110,7 +142,9 @@ export default function About() {
                 <i className="bi bi-check2-circle display-5 text-brand mb-3"></i>
                 <h3>Rigueur</h3>
                 <p className="text-muted">
-                  Chaque appel et chaque message sont traités avec précision pour garantir une transmission fiable des informations.
+                  Chaque appel et chaque message sont traités avec
+                  attention et précision pour garantir une transmission
+                  fiable des informations.
                 </p>
               </div>
             </div>
@@ -120,7 +154,9 @@ export default function About() {
                 <i className="bi bi-lightning-charge display-5 text-brand mb-3"></i>
                 <h3>Réactivité</h3>
                 <p className="text-muted">
-                  Les informations importantes sont transmises rapidement selon vos consignes et priorités médicales.
+                  Les informations importantes sont transmises
+                  rapidement, dans le respect de vos consignes
+                  et de vos priorités.
                 </p>
               </div>
             </div>
@@ -128,9 +164,11 @@ export default function About() {
             <div className="col-md-4">
               <div className="p-4 rounded shadow-sm h-100" data-aos="zoom-in" data-aos-delay="150">
                 <i className="bi bi-heart display-5 text-brand mb-3"></i>
-                <h3>Relation patient</h3>
+                <h3>Qualité de l’accueil</h3>
                 <p className="text-muted">
-                  Un accueil humain et rassurant, essentiel pour la qualité de la relation entre le cabinet et ses patients.
+                  Un accueil humain, professionnel et rassurant,
+                  essentiel pour instaurer une relation de confiance
+                  avec vos patients.
                 </p>
               </div>
             </div>
@@ -138,7 +176,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Wave après compétences (inversée) */}
+        {/* Wave après approche */}
         <div className="wave-top">
           <svg viewBox="0 0 1440 40" preserveAspectRatio="none" style={{ width: '100%' }}>
             <path fill="url(#grad2)" fillOpacity="1" d="M0,20 C360,0 1080,40 1440,20 L1440,0 L0,0 Z" />
@@ -158,7 +196,8 @@ export default function About() {
             <div className="text-center mb-4">
               <h2>Ce que je vous apporte</h2>
               <p className="text-muted">
-                Un télésecrétariat médical fiable, pensé pour alléger votre quotidien et sécuriser votre organisation.
+                Un télésecrétariat fiable et personnalisé pour
+                faciliter votre quotidien et améliorer votre organisation.
               </p>
             </div>
 
@@ -168,23 +207,26 @@ export default function About() {
                 <i className="bi bi-shield-lock display-5 text-brand mb-2"></i>
                 <h3>Confidentialité</h3>
                 <p className="text-muted">
-                  Respect strict du secret médical et protection des données de vos patients.
+                  Une attention constante portée à la confidentialité
+                  des échanges et à la protection des données de vos patients.
                 </p>
               </div>
 
               <div className="col-md-4">
                 <i className="bi bi-person-check display-5 text-brand mb-2"></i>
-                <h3>Fiabilité</h3>
+                <h3>Interlocutrice unique</h3>
                 <p className="text-muted">
-                  Un service constant et structuré sur lequel vous pouvez compter chaque jour.
+                  Un contact direct et privilégié, une relation de confiance
+                  et un accompagnement personnalisé au quotidien.
                 </p>
               </div>
 
               <div className="col-md-4">
                 <i className="bi bi-graph-up-arrow display-5 text-brand mb-2"></i>
-                <h3>Optimisation</h3>
+                <h3>Organisation adaptée</h3>
                 <p className="text-muted">
-                  Moins d’interruptions, une meilleure organisation et un meilleur confort de travail.
+                  Une gestion de vos appels et de vos agendas pensée
+                  selon votre activité, vos besoins et votre fonctionnement.
                 </p>
               </div>
 
@@ -209,9 +251,18 @@ export default function About() {
         {/* CTA final */}
         <div className="container">
           <div className="text-center mb-3" data-aos="fade-up">
-            <h3 className="mb-5">Prêt à déléguer votre administratif ?</h3>
+            <h3 className="mb-4">
+              Et si vous me confiez la gestion de vos appels et de votre agenda ?
+            </h3>
+
+            <p className="mb-4">
+              Que vous exerciez seul ou au sein d’une structure regroupant
+              plusieurs praticiens, étudions ensemble vos besoins
+              et votre organisation.
+            </p>
+
             <Link href="/contact" className="btn btn-turquoise btn-lg">
-              Contactez-moi
+              Échangeons sur votre projet
             </Link>
           </div>
         </div>
@@ -223,7 +274,7 @@ export default function About() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
+            "@type": "ProfessionalService",
             "name": "Nathalie Darnaudat",
             "url": "https://www.nathaliedarnaudat.fr",
             "logo": "https://www.nathaliedarnaudat.fr/images/Logo.webp",
